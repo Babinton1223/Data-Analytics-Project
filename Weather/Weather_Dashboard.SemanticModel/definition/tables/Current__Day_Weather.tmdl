@@ -1,0 +1,506 @@
+table Current__Day_Weather
+	lineageTag: 88d5e0e8-bb93-4a47-99d2-9c9e71f9a98b
+
+	column 'location.name'
+		dataType: string
+		lineageTag: 49c6bd42-9fe7-442d-90c5-dda7d04a56b3
+		summarizeBy: none
+		sourceColumn: location.name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'location.region'
+		dataType: string
+		lineageTag: f8ce0b65-cbf6-4c16-b2ca-eec9b81cba4d
+		summarizeBy: none
+		sourceColumn: location.region
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'location.country'
+		dataType: string
+		lineageTag: 0548abab-d173-4eb9-92b6-3466850d4b33
+		summarizeBy: none
+		sourceColumn: location.country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'location.lat'
+		dataType: double
+		lineageTag: ec3a89db-2de9-4dc6-a4b8-6c7ba099ac18
+		summarizeBy: sum
+		sourceColumn: location.lat
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'location.lon'
+		dataType: double
+		lineageTag: 8ff69900-9248-4ada-94fe-b41f0dfbaf2d
+		summarizeBy: sum
+		sourceColumn: location.lon
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'location.tz_id'
+		dataType: string
+		lineageTag: 6b91c711-fc5e-4f34-9235-a9ed26b65423
+		summarizeBy: none
+		sourceColumn: location.tz_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'location.localtime_epoch'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c642fb2-a3bb-472f-a3ec-c06ed0f76dad
+		summarizeBy: sum
+		sourceColumn: location.localtime_epoch
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'location.localtime'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 126a6c1f-3e28-419d-9acc-01eb49a0e6b6
+		summarizeBy: none
+		sourceColumn: location.localtime
+
+		variation Variation
+			isDefault
+			relationship: e6e22910-d4dd-4cde-be24-2b6eac6650ff
+			defaultHierarchy: LocalDateTable_91f98d9b-5587-4a6b-84ee-e7c656538ae2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.last_updated_epoch'
+		dataType: int64
+		formatString: 0
+		lineageTag: a1758095-56db-4cd8-b6b7-f0dbac4391df
+		summarizeBy: sum
+		sourceColumn: current.last_updated_epoch
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.last_updated'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 808ac62c-781a-40ce-9e09-617046b85d74
+		summarizeBy: none
+		sourceColumn: current.last_updated
+
+		variation Variation
+			isDefault
+			relationship: 670e45b4-c971-4d1f-bb4a-d4bad52f40ca
+			defaultHierarchy: LocalDateTable_71f58c3f-2ce1-440d-922d-f99a7f2dd7b3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.temp_c'
+		dataType: int64
+		formatString: 0
+		lineageTag: 48558190-5a31-4cb9-aa87-9e1df17042c6
+		summarizeBy: sum
+		sourceColumn: current.temp_c
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.temp_f'
+		dataType: double
+		lineageTag: a3ffe4c9-c7c2-446c-9630-5016a27ada00
+		summarizeBy: sum
+		sourceColumn: current.temp_f
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.is_day'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6fdf590e-2283-4be2-acb8-ad92433da7d9
+		summarizeBy: sum
+		sourceColumn: current.is_day
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.condition.text'
+		dataType: string
+		lineageTag: 234c23d4-5eb0-4d61-b759-115f672c0ace
+		summarizeBy: none
+		sourceColumn: current.condition.text
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.condition.icon'
+		dataType: string
+		lineageTag: 3e70c845-311e-4e5d-b7ab-8eea4801f4aa
+		summarizeBy: none
+		sourceColumn: current.condition.icon
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.condition.code'
+		dataType: int64
+		formatString: 0
+		lineageTag: b0c1a637-4d52-4e03-b4af-6c02c0fd5853
+		summarizeBy: sum
+		sourceColumn: current.condition.code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.wind_mph'
+		dataType: double
+		lineageTag: 7f9754fe-dacd-4147-b6da-d20fb24e9b22
+		summarizeBy: sum
+		sourceColumn: current.wind_mph
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.wind_kph'
+		dataType: double
+		lineageTag: 013de09b-c810-4299-b0dc-46ddd9b4cf01
+		summarizeBy: sum
+		sourceColumn: current.wind_kph
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.wind_degree'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2390abb2-32b0-41b3-8b99-6b9d8218d792
+		summarizeBy: sum
+		sourceColumn: current.wind_degree
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.wind_dir'
+		dataType: string
+		lineageTag: 5468e5d4-bea4-440a-a8f2-cf9a4f61d4e4
+		summarizeBy: none
+		sourceColumn: current.wind_dir
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.pressure_mb'
+		dataType: int64
+		formatString: 0
+		lineageTag: d52729ca-36cc-4c22-bd68-a37297a20b8d
+		summarizeBy: sum
+		sourceColumn: current.pressure_mb
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.pressure_in'
+		dataType: double
+		lineageTag: a165841a-fa95-471b-bdf1-714cc160b136
+		summarizeBy: sum
+		sourceColumn: current.pressure_in
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.precip_mm'
+		dataType: int64
+		formatString: 0
+		lineageTag: c3a245dc-a9f1-48d1-ad6e-b1ac015980e6
+		summarizeBy: sum
+		sourceColumn: current.precip_mm
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.precip_in'
+		dataType: int64
+		formatString: 0
+		lineageTag: c5bfcfdc-84f9-4dc1-80f8-dc446070db42
+		summarizeBy: sum
+		sourceColumn: current.precip_in
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.humidity'
+		dataType: int64
+		lineageTag: 9a945cf3-ee97-4262-922c-6b928cce9a77
+		summarizeBy: sum
+		sourceColumn: current.humidity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.cloud'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6aa13ded-c361-4615-be1f-8b33774559c4
+		summarizeBy: sum
+		sourceColumn: current.cloud
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.feelslike_c'
+		dataType: double
+		lineageTag: 1d18c757-1c0b-4647-bad2-b619c668a500
+		summarizeBy: sum
+		sourceColumn: current.feelslike_c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.feelslike_f'
+		dataType: double
+		lineageTag: 0f59936e-381a-4f1e-9877-f6265467a058
+		summarizeBy: sum
+		sourceColumn: current.feelslike_f
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.windchill_c'
+		dataType: double
+		lineageTag: a2d9defb-cd7e-4a70-8aa5-beff3e2ee0db
+		summarizeBy: sum
+		sourceColumn: current.windchill_c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.windchill_f'
+		dataType: double
+		lineageTag: d5b2cc34-fd79-4654-aae0-69d1377ada5b
+		summarizeBy: sum
+		sourceColumn: current.windchill_f
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.heatindex_c'
+		dataType: double
+		lineageTag: ca9c364a-2fb3-4ec8-968e-6c491154a4ee
+		summarizeBy: sum
+		sourceColumn: current.heatindex_c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.heatindex_f'
+		dataType: double
+		lineageTag: edb849e5-b2a2-45df-b927-d091843ad490
+		summarizeBy: sum
+		sourceColumn: current.heatindex_f
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.dewpoint_c'
+		dataType: double
+		lineageTag: 6f3f5dc7-7a2e-4c37-a54b-447e45a8b2c3
+		summarizeBy: sum
+		sourceColumn: current.dewpoint_c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.dewpoint_f'
+		dataType: double
+		lineageTag: b45129b3-ac58-400c-b8b4-d50d9aea8769
+		summarizeBy: sum
+		sourceColumn: current.dewpoint_f
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.vis_km'
+		dataType: int64
+		formatString: 0
+		lineageTag: cd2b3585-d18e-49e9-9690-2330883aaee9
+		summarizeBy: sum
+		sourceColumn: current.vis_km
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.vis_miles'
+		dataType: int64
+		formatString: 0
+		lineageTag: 53c4f4b3-46ad-4c87-be88-8b3f8631fd7a
+		summarizeBy: sum
+		sourceColumn: current.vis_miles
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.uv'
+		dataType: double
+		lineageTag: 01940cfa-833c-478b-9c5e-69e87bb1bd87
+		summarizeBy: sum
+		sourceColumn: current.uv
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.gust_mph'
+		dataType: double
+		lineageTag: 7d89ad8b-3d48-4d38-a29d-c3384f91df7d
+		summarizeBy: sum
+		sourceColumn: current.gust_mph
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.gust_kph'
+		dataType: int64
+		formatString: 0
+		lineageTag: f23d6fe0-9f0d-4de4-bb72-62e56969c6b5
+		summarizeBy: sum
+		sourceColumn: current.gust_kph
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.air_quality.co'
+		dataType: double
+		lineageTag: a0ea76da-ad1c-4c75-967d-26b9684ed7ba
+		summarizeBy: sum
+		sourceColumn: current.air_quality.co
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.air_quality.no2'
+		dataType: double
+		lineageTag: 293f3241-74c0-4bf3-bd2d-7da693167a60
+		summarizeBy: sum
+		sourceColumn: current.air_quality.no2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.air_quality.o3'
+		dataType: int64
+		formatString: 0
+		lineageTag: 39e0af28-3e49-4249-aac7-f4658aae0e89
+		summarizeBy: sum
+		sourceColumn: current.air_quality.o3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.air_quality.so2'
+		dataType: double
+		lineageTag: 2af81d8d-edbd-48b7-9690-1394cfbae924
+		summarizeBy: sum
+		sourceColumn: current.air_quality.so2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.air_quality.pm2_5'
+		dataType: double
+		lineageTag: 9de1cb74-85ca-46d5-ab03-9d011c669738
+		summarizeBy: sum
+		sourceColumn: current.air_quality.pm2_5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.air_quality.pm10'
+		dataType: double
+		lineageTag: ec657ef1-0d46-4b2e-9d36-cefdc5aff349
+		summarizeBy: sum
+		sourceColumn: current.air_quality.pm10
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.air_quality.us-epa-index'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2142b764-05df-4013-aeb2-d519c2191ad5
+		summarizeBy: sum
+		sourceColumn: current.air_quality.us-epa-index
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.air_quality.gb-defra-index'
+		dataType: int64
+		formatString: 0
+		lineageTag: 33cd22b8-c423-47d8-ba65-72015cc16974
+		summarizeBy: sum
+		sourceColumn: current.air_quality.gb-defra-index
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'current.short_rad'
+		dataType: double
+		lineageTag: 35bc4b41-8277-444d-aafb-7b8c2afa3835
+		summarizeBy: sum
+		sourceColumn: current.short_rad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.diff_rad'
+		dataType: double
+		lineageTag: 1e2750e8-2bad-447a-a719-75c963af6c94
+		summarizeBy: sum
+		sourceColumn: current.diff_rad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.dni'
+		dataType: double
+		lineageTag: b783e02a-5629-40c2-bf62-8712e1eac99f
+		summarizeBy: sum
+		sourceColumn: current.dni
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'current.gti'
+		dataType: double
+		lineageTag: d27d0bc5-4e9d-4c9e-b58d-ba35db434d73
+		summarizeBy: sum
+		sourceColumn: current.gti
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Current__Day_Weather = m
+		mode: import
+		source =
+				let
+				    Source = Master_Weather,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"location.name", "location.region", "location.country", "location.lat", "location.lon", "location.tz_id", "location.localtime_epoch", "location.localtime", "current.last_updated_epoch", "current.last_updated", "current.temp_c", "current.temp_f", "current.is_day", "current.condition.text", "current.condition.icon", "current.condition.code", "current.wind_mph", "current.wind_kph", "current.wind_degree", "current.wind_dir", "current.pressure_mb", "current.pressure_in", "current.precip_mm", "current.precip_in", "current.humidity", "current.cloud", "current.feelslike_c", "current.feelslike_f", "current.windchill_c", "current.windchill_f", "current.heatindex_c", "current.heatindex_f", "current.dewpoint_c", "current.dewpoint_f", "current.vis_km", "current.vis_miles", "current.uv", "current.gust_mph", "current.gust_kph", "current.air_quality.co", "current.air_quality.no2", "current.air_quality.o3", "current.air_quality.so2", "current.air_quality.pm2_5", "current.air_quality.pm10", "current.air_quality.us-epa-index", "current.air_quality.gb-defra-index", "current.short_rad", "current.diff_rad", "current.dni", "current.gti"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+				    #"Replaced Value" = Table.ReplaceValue(#"Removed Duplicates","//","https://",Replacer.ReplaceText,{"current.condition.icon"})
+				in
+				    #"Replaced Value"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

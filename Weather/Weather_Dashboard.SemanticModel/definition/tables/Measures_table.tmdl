@@ -1,0 +1,183 @@
+table Measures_table
+	lineageTag: bd550d57-309e-4a24-9620-dee2b04b68e9
+
+	measure Cur_temp_Celcius = SUM(Current__Day_Weather[current.temp_c])&" °C"
+		lineageTag: 76e8aa23-fdcf-4a11-8916-29f010cdce23
+
+	measure Cur_Last_Updated_time = "Last_Updated"&" "&FORMAT(FIRSTNONBLANK(Current__Day_Weather[current.last_updated].[Date],""),"dd mmm yy")
+		lineageTag: 1726eef4-e3c0-441b-b6c1-4437ade64611
+
+	measure Wind_Kph = SUM(Current__Day_Weather[current.wind_kph])&" Kph"
+		lineageTag: 1776d3b3-ab41-4f4c-b665-ebfdb6ce18ac
+
+	measure Visibility_kph = SUM(Current__Day_Weather[current.vis_km])&" Km"
+		lineageTag: 205009c5-adba-4da9-94d1-cfdfe0fa6fb0
+
+	measure For_Temp_Celcius = AVERAGE(Forecast_Day_Weather[forecast.forecastday.day.avgtemp_c])&" °C"
+		lineageTag: ae9b7379-969e-46b6-ab84-9c4457bfcb02
+
+	measure 'AQI color PM10' = ```
+			
+			Var AQI =ROUND(SELECTEDVALUE(Current__Day_Weather[current.air_quality.pm10]),0)
+			return 
+			      SWITCH(
+			        TRUE(),
+			        AQI<=10,"#43d946", --Good (Green)
+			        AQI<=20,"#fff570", --Moderate (Yellow)
+			        AQI<=30,"#ff9800", --Poor (Orange)
+			        AQI<=40,"#d99343", --Unhealthy (Red)
+			        AQI<=50,"#ff5b0f", -- Severe (Purple)
+			        "#d95243"            -- Hazardous (Dark Maroon)
+			      )
+			```
+		displayFolder: AQI Color/Sugg/Status
+		lineageTag: 06b9f97a-c658-4e70-8c01-98cb2c2c166f
+
+	measure 'AQI color PM2.5' = ```
+			
+			Var AQI =ROUND(SELECTEDVALUE(Current__Day_Weather[current.air_quality.pm2_5]),0)
+			return 
+			      SWITCH(
+			        TRUE(),
+			        AQI<=10,"#43d946", --Good (Green)
+			        AQI<=20,"#fff570", --Moderate (Yellow)
+			        AQI<=30,"#ff9800", --Poor (Orange)
+			        AQI<=40,"#d99343", --Unhealthy (Red)
+			        AQI<=50,"#ff5b0f", -- Severe (Purple)
+			        "#d95243"            -- Hazardous (Dark Maroon)
+			      )
+			```
+		displayFolder: AQI Color/Sugg/Status
+		lineageTag: 5a22d864-7b6f-4e33-9030-e6ebf4578282
+
+	measure 'AQI color SO2' = ```
+			
+			Var AQI =ROUND(SELECTEDVALUE(Current__Day_Weather[current.air_quality.so2]),0)
+			return 
+			      SWITCH(
+			        TRUE(),
+			        AQI<=10,"#43d946", --Good (Green)
+			        AQI<=20,"#fff570", --Moderate (Yellow)
+			        AQI<=30,"#ff9800", --Poor (Orange)
+			        AQI<=40,"#d99343", --Unhealthy (Red)
+			        AQI<=50,"#ff5b0f", -- Severe (Purple)
+			        "#d95243"            -- Hazardous (Dark Maroon)
+			      )
+			```
+		displayFolder: AQI Color/Sugg/Status
+		lineageTag: 47b02803-11fb-43b3-9b8d-6c6fccd8cb98
+
+	measure 'AQI color CO' = ```
+			
+			Var AQI =ROUND(SELECTEDVALUE(Current__Day_Weather[current.air_quality.co]),0)
+			return 
+			      SWITCH(
+			        TRUE(),
+			        AQI<=50,"#43d946", --Good (Green)
+			        AQI<=100,"#fff570", --Moderate (Yellow)
+			        AQI<=150,"#ff9800", --Poor (Orange)
+			        AQI<=200,"#d99343", --Unhealthy (Red)
+			        AQI<=300,"#ff5b0f", -- Severe (Purple)
+			        "#d95243"            -- Hazardous (Dark Maroon)
+			      )
+			```
+		displayFolder: AQI Color/Sugg/Status
+		lineageTag: 33f72f9a-ce2e-4839-b31c-cfcbd8e05aab
+
+	measure 'AQI color NO2' = ```
+			
+			Var AQI =ROUND(SELECTEDVALUE(Current__Day_Weather[current.air_quality.no2]),0)
+			return 
+			      SWITCH(
+			        TRUE(),
+			        AQI<=10,"#43d946", --Good (Green)
+			        AQI<=20,"#fff570", --Moderate (Yellow)
+			        AQI<=30,"#ff9800", --Poor (Orange)
+			        AQI<=40,"#d99343", --Unhealthy (Red)
+			        AQI<=50,"#ff5b0f", -- Severe (Purple)
+			        "#d95243"            -- Hazardous (Dark Maroon)
+			      )
+			```
+		displayFolder: AQI Color/Sugg/Status
+		lineageTag: c8b8a5ab-5223-431d-b54a-cf96ff09fbed
+
+	measure 'AQI color O3' = ```
+			
+			Var AQI =ROUND(SELECTEDVALUE(Current__Day_Weather[current.air_quality.o3]),0)
+			return 
+			      SWITCH(
+			        TRUE(),
+			        AQI<=10,"#43d946", --Good (Green)
+			        AQI<=20,"#fff570", --Moderate (Yellow)
+			        AQI<=30,"#ff9800", --Poor (Orange)
+			        AQI<=40,"#d99343", --Unhealthy (Red)
+			        AQI<=50,"#ff5b0f", -- Severe (Purple)
+			        "#d95243"            -- Hazardous (Dark Maroon)
+			      )
+			```
+		displayFolder: AQI Color/Sugg/Status
+		lineageTag: 62b0bbec-d3be-494c-8677-e057a640deea
+
+	measure Maxvalue = 60
+		formatString: 0
+		lineageTag: 51caf59e-ea0a-4cc6-b77e-5e51507bb62b
+
+	measure Left_value_pM10 = [Maxvalue]- SUM(Current__Day_Weather[current.air_quality.pm10])
+		lineageTag: 175b5de7-c19b-4fe7-80c8-f66392e8d662
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AQI status text' = ```
+			
+			Var AQI =ROUND(SELECTEDVALUE(Current__Day_Weather[current.air_quality.pm10]),0)
+			return 
+			      SWITCH(
+			        TRUE(),
+			        AQI<=10,"Good",
+			        AQI<=20,"Moderate",
+			        AQI<=30,"Unhealthy for sensitive",
+			        AQI<=40,"Unsafe",
+			        AQI<=50,"Hazardous",
+			        "Immediate action needed"
+			      )
+			```
+		displayFolder: AQI Color/Sugg/Status
+		lineageTag: bdddaaf5-8203-4996-9bd5-f18b4a8f6051
+
+	measure 'AQI suggestion PM10' = ```
+			
+			Var AQI =ROUND(SELECTEDVALUE(Current__Day_Weather[current.air_quality.pm10]),0)
+			return 
+			      SWITCH(
+			        TRUE(),
+			        AQI<=10,"Air is clean and Healthy",
+			        AQI<=20,"Acceptable air quality, stay active",
+			        AQI<=30,"Sensitive people should reduce outdoor activities",
+			        AQI<=40,"Limit prolonged outdoor exertion",
+			        AQI<=50,"Avoid outdoor activity",
+			        "Stay indoor and wear masks"
+			      )
+			```
+		displayFolder: AQI Color/Sugg/Status
+		lineageTag: 3d92d2db-f9ea-456a-9714-431adc5d0800
+
+	measure Humidity = SUM(Current__Day_Weather[current.humidity])&" %"
+		lineageTag: ab9183cb-5cf0-4ca2-ad84-3984928c6b2d
+
+	measure Pressure = SUM(Current__Day_Weather[current.pressure_in])& " mm"
+		lineageTag: 8ebd777e-2ad5-404a-b48c-09f75f1b7d85
+
+	column 'location.name'
+		lineageTag: 6b4dc551-0edf-42b0-8b84-c88677bc499b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Locations[location.name]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Measures_table = calculated
+		mode: import
+		source = SUMMARIZE(Current__Day_Weather,Locations[location.name])
+
+	annotation PBI_Id = 809032ece56c46b4b996f4e599c13d49
+

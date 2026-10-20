@@ -1,0 +1,59 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Weather_Report_CHN","Weather_Report_HYD","Weather_Report_BGL","Weather_Report_KCH","Weather_Report_MUM","Master_Weather","Current__Day_Weather","Forecast_Day_Weather","Forecast_Hour_Weather"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Weather_Report_CHN
+ref table DateTableTemplate_abd0a8c1-ee9c-47c1-abd8-c95b009b14b2
+ref table LocalDateTable_486d3317-328c-4fcf-a062-0573d98cdcbf
+ref table LocalDateTable_7971d1a2-6424-458f-98cb-95c50ad868df
+ref table LocalDateTable_d6e50a0d-8af2-4972-ac0e-ec68cb2fc78e
+ref table LocalDateTable_3ffdfa55-671b-4cb3-88ad-e3261146d556
+ref table Weather_Report_HYD
+ref table LocalDateTable_0baf8d8c-35e3-4a47-8c2d-583e103c8720
+ref table LocalDateTable_37d378e0-997c-4100-9f82-1a6e32c1e4f4
+ref table LocalDateTable_52b94485-06bf-443b-9c55-8f41d6cdfdf6
+ref table LocalDateTable_9bb4bfd9-a353-430b-9ab0-e0ce02281654
+ref table Weather_Report_BGL
+ref table LocalDateTable_b39cc0d8-76b0-4dbc-a4ae-77d5dd382449
+ref table LocalDateTable_7f6cfbd9-a39d-4f7f-8508-418ab5d09ebf
+ref table LocalDateTable_1150aed2-f337-4b2e-b5ac-583fb7b8c121
+ref table LocalDateTable_3f991f73-a659-4470-ab6a-40a5d8ac9e75
+ref table Weather_Report_KCH
+ref table LocalDateTable_7da89d69-9ab8-4caf-8bc8-68e286e1f125
+ref table LocalDateTable_091d2d24-ce22-4548-8d28-f0487c0a2414
+ref table LocalDateTable_e078605f-2e77-4e61-851a-f97f36c60181
+ref table LocalDateTable_a075d3d4-c460-4c1a-bbbd-4403219cc62d
+ref table Weather_Report_MUM
+ref table LocalDateTable_2fc52635-6b6b-480a-9ab2-c881b0b9e4c7
+ref table LocalDateTable_1ef0778d-c4c7-4b36-adbc-b61eeb87f95f
+ref table LocalDateTable_0ce581d9-eb16-4e58-abd4-ccbe92c38158
+ref table LocalDateTable_01a7e7d7-5238-4fd3-8dda-605645ba3186
+ref table Master_Weather
+ref table LocalDateTable_b1fedc85-33d6-4569-a38b-28931b6532fd
+ref table LocalDateTable_f15c08dc-cba6-4256-a503-b2beb77f52ad
+ref table LocalDateTable_f238607d-004c-414d-93b7-02d5c1ac983f
+ref table LocalDateTable_e7af32b1-c949-4bb1-a63b-16437f098b9c
+ref table Current__Day_Weather
+ref table LocalDateTable_91f98d9b-5587-4a6b-84ee-e7c656538ae2
+ref table LocalDateTable_71f58c3f-2ce1-440d-922d-f99a7f2dd7b3
+ref table Forecast_Day_Weather
+ref table LocalDateTable_834e4164-03d7-4389-843b-452361318690
+ref table LocalDateTable_af1f1a7b-8c63-42fd-9541-62e8b5db73b2
+ref table Forecast_Hour_Weather
+ref table LocalDateTable_fb92ed11-7b21-4265-a81d-c693bc5591ae
+ref table LocalDateTable_5c8e5b07-3164-4da5-89a4-abc77f44c1e6
+ref table Locations
+ref table Measures_table
+
+ref cultureInfo en-US
+

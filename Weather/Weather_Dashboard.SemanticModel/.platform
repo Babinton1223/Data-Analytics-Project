@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Weather_Dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "15ca9b38-86d5-4b42-980d-710d5170bf5c"
+  }
+}

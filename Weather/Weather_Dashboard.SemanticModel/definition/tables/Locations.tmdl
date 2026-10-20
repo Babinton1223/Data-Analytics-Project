@@ -1,0 +1,17 @@
+table Locations
+	lineageTag: 5473e95d-9149-46da-8192-e5463a66f8b7
+
+	column 'location.name'
+		lineageTag: 15ced96f-3934-45a9-8c0a-fa970abc4229
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Current__Day_Weather[location.name]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Locations = calculated
+		mode: import
+		source = SUMMARIZE(Current__Day_Weather,Current__Day_Weather[location.name])
+
+	annotation PBI_Id = 92345811f83c4ac59be9044ba5fa6cd7
+

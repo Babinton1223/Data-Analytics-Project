@@ -1,0 +1,119 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY25SU10",
+      "reportVersionAtImport": {
+        "visual": "2.1.0",
+        "report": "3.0.0",
+        "page": "2.3.0"
+      },
+      "type": "SharedResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Group_1_(61)3848566617909892.png",
+          "path": "Group_1_(61)3848566617909892.png",
+          "type": "Image"
+        },
+        {
+          "name": "humidity9996373791260218.png",
+          "path": "humidity9996373791260218.png",
+          "type": "Image"
+        },
+        {
+          "name": "location_(2)7090202230894129.png",
+          "path": "location_(2)7090202230894129.png",
+          "type": "Image"
+        },
+        {
+          "name": "rain7056705406391902.png",
+          "path": "rain7056705406391902.png",
+          "type": "Image"
+        },
+        {
+          "name": "sunrise_(1)36374666542438483.png",
+          "path": "sunrise_(1)36374666542438483.png",
+          "type": "Image"
+        },
+        {
+          "name": "sunrise26317835520494703.png",
+          "path": "sunrise26317835520494703.png",
+          "type": "Image"
+        },
+        {
+          "name": "thermometer_(1)21882090435843227.png",
+          "path": "thermometer_(1)21882090435843227.png",
+          "type": "Image"
+        },
+        {
+          "name": "uv-index7916821230084338.png",
+          "path": "uv-index7916821230084338.png",
+          "type": "Image"
+        },
+        {
+          "name": "visibility29327159071583664.png",
+          "path": "visibility29327159071583664.png",
+          "type": "Image"
+        },
+        {
+          "name": "windy7788799512878126.png",
+          "path": "windy7788799512878126.png",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY25SU10",
+          "path": "BaseThemes/CY25SU10.json",
+          "type": "BaseTheme"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}
