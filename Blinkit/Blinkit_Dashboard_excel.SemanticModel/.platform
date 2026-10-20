@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Blinkit_Dashboard_excel"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "37db3b90-35cf-4807-913f-bc8408c5b03b"
+  }
+}

@@ -1,0 +1,4 @@
+EVALUATE
+    SUMMARIZECOLUMNS(
+        "Period_Feedback", [Period_Feedback]
+    )

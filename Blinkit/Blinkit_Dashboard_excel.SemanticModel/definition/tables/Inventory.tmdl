@@ -1,0 +1,113 @@
+table Inventory
+	lineageTag: 642fdde3-7ada-42b0-93b1-2175543a1dfe
+
+	column product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 4907bebc-dbcf-46a2-86bb-11ce22a378c3
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 99ba092e-4f88-4fda-9158-af02810ea13e
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Product_name
+		dataType: string
+		lineageTag: 1a3484af-ef6e-42d0-a659-62f6f9bd0a3c
+		summarizeBy: none
+		sourceColumn: Product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unit_price
+		dataType: double
+		lineageTag: 05f01f77-ec63-4af7-9317-159a3b26b406
+		summarizeBy: sum
+		sourceColumn: Unit_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Stock_type
+		dataType: string
+		lineageTag: a4aa9e5e-e02b-4711-a405-b2838b5fb48e
+		summarizeBy: none
+		sourceColumn: Stock_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value_Type
+		dataType: string
+		lineageTag: 7c5eca4a-9e47-4ee8-bbdc-e4140a72aa2b
+		summarizeBy: none
+		sourceColumn: Value_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value
+		dataType: double
+		lineageTag: a235ad80-a4a9-4cb7-825a-86eea571cfac
+		summarizeBy: sum
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Products_Category
+		dataType: string
+		lineageTag: 627c1e32-c57f-47f2-b7d5-cacc28d10141
+		summarizeBy: none
+		sourceColumn: Products_Category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Inventory = m
+		mode: import
+		source =
+				let
+				    Source = #"Dataset - Excel",
+				    Content = Source{4}[Content],
+				    #"Imported CSV" = Csv.Document(Content,[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Imported CSV", [PromoteAllScalars=true]),
+				    #"Replaced Value" = Table.ReplaceValue(#"Promoted Headers","-","/",Replacer.ReplaceText,{"date"}),
+				    #"Inserted Date" = Table.AddColumn(#"Replaced Value", "Date.1", each Date.From([date]), type date),
+				    #"Removed Columns" = Table.RemoveColumns(#"Inserted Date",{"Date.1"}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Removed Columns", "date", Splitter.SplitTextByDelimiter("/", QuoteStyle.Csv), {"date.1", "date.2", "date.3"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"product_id", Int64.Type}, {"date.1", Int64.Type}, {"date.2", Int64.Type}, {"date.3", Int64.Type}, {"stock_received", Int64.Type}, {"damaged_stock", Int64.Type}, {"Products", type text}, {"New_Products", type text}}),
+				    #"Merged Columns" = Table.CombineColumns(Table.TransformColumnTypes(#"Changed Type", {{"date.2", type text}, {"date.1", type text}, {"date.3", type text}}, "en-US"),{"date.2", "date.1", "date.3"},Combiner.CombineTextByDelimiter("/", QuoteStyle.None),"Merged"),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Merged Columns",{{"Merged", type date}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type1",{{"Merged", "Date"}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Renamed Columns", {"product_id"}, Products, {"product_id"}, "Products.1", JoinKind.LeftOuter),
+				    #"Expanded Products.1" = Table.ExpandTableColumn(#"Merged Queries", "Products.1", {"price"}, {"Products.1.price"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Expanded Products.1",{{"Products.1.price", "Unit_price"}}),
+				    #"Unpivoted Columns" = Table.UnpivotOtherColumns(#"Renamed Columns1", {"product_id", "Date", "Products", "New_Products", "Unit_price"}, "Attribute", "Value"),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Unpivoted Columns",{{"Attribute", "Stock_type"}, {"Value", "Qty"}}),
+				    #"Added Custom" = Table.AddColumn(#"Renamed Columns2", "Value", each [Unit_price]*[Qty]),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Custom",{{"Value", type number}}),
+				    #"Unpivoted Columns1" = Table.UnpivotOtherColumns(#"Changed Type2", {"product_id", "Date", "Products", "New_Products", "Unit_price", "Stock_type"}, "Attribute", "Value.1"),
+				    #"Renamed Columns3" = Table.RenameColumns(#"Unpivoted Columns1",{{"Attribute", "Value_Type"}, {"Value.1", "Value"}, {"New_Products", "Product_name"}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Renamed Columns3", each [Date] >= #date(2023, 1, 1) and [Date] <= #date(2024, 12, 31)),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Filtered Rows",{"Products"}),
+				    #"Merged Queries1" = Table.NestedJoin(#"Removed Columns1", {"product_id"}, Products, {"product_id"}, "Products", JoinKind.LeftOuter),
+				    #"Expanded Products" = Table.ExpandTableColumn(#"Merged Queries1", "Products", {"category"}, {"Products.category"}),
+				    #"Renamed Columns4" = Table.RenameColumns(#"Expanded Products",{{"Products.category", "Products_Category"}}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Renamed Columns4",{"product_id", "Date", "Products_Category", "Product_name", "Unit_price", "Stock_type", "Value_Type", "Value"})
+				in
+				    #"Reordered Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

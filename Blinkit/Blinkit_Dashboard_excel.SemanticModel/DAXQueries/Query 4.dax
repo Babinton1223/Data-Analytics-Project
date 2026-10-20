@@ -1,0 +1,472 @@
+DEFINE
+	MEASURE 'Config_Measures'[Current_Year] = VAR yr = 2024
+		VAR sys_yr = YEAR([System_date])
+		RETURN
+			(IF(
+				ISFILTERED(Autodate[Option]),
+				sys_yr,
+				yr
+			))
+	MEASURE 'Config_Measures'[Previous_Year] = [Current_Year] - 1
+	MEASURE 'Config_Measures'[System_date] = NOW()
+	MEASURE 'Config_Measures'[Sel_autodate_option] = ISFILTERED(Autodate[Option])
+	MEASURE 'Config_Measures'[YTD_Month] = VAR sysmonth = MONTH([System_date])
+		VAR selected_YTD_month = SELECTEDVALUE(Manual_Calendar[MonthIndex])
+		RETURN
+			IF(
+				ISFILTERED(Autodate[Option]),
+				sysmonth,
+				selected_YTD_month
+			)
+	MEASURE 'Sales_Measure'[Value] = SUM(Master_table[Value])
+	MEASURE 'Sales_Measure'[YTD] = VAR ytd_sys_month = [YTD_Month]
+		RETURN
+			CALCULATE(
+				[Value],
+				'Calendar'[MonthIndex] <= ytd_sys_month
+			)
+	MEASURE 'Sales_Measure'[Cur_Yr_Value] = VAR cur_Yr = [Current_Year]
+		RETURN
+			CALCULATE(
+				[Period_Value],
+				'Calendar'[Year] = cur_Yr
+			)
+	MEASURE 'Sales_Measure'[Prev_yr_value] = VAR prev_yr = [Previous_Year]
+		RETURN
+			CALCULATE(
+				[Period_Value],
+				'Calendar'[Year] = prev_yr
+			)
+	MEASURE 'Sales_Measure'[CY_PY_Growth%] = VAR growth = DIVIDE(
+			[Cur_Yr_Value] - [Prev_yr_value],
+			[Prev_yr_value],
+			0
+		)
+		RETURN
+			growth
+	MEASURE 'Sales_Measure'[TopN_Area_by_value] = VAR Rank_value = RANKX(
+			ALL(Master_table[area]),
+			[Period_Value],
+			,
+			DESC
+		)
+		VAR _rank = SELECTEDVALUE(Rank_Table[Value])
+		VAR Rank_order = IF(
+			Rank_value <= _rank,
+			[Period_Value],
+			BLANK()
+		)
+		RETURN
+			IF(
+				_rank = 0,
+				[Period_Value],
+				Rank_order
+			)
+	MEASURE 'Sales_Measure'[TopN_Product_by_value] = VAR Rank_value = RANKX(
+			ALL(Master_table[Product_name]),
+			[Period_Value],
+			,
+			DESC
+		)
+		VAR _rank = SELECTEDVALUE(Rank_Table[Value])
+		VAR Rank_order = IF(
+			Rank_value <= _rank,
+			[Period_Value],
+			BLANK()
+		)
+		RETURN
+			IF(
+				_rank = 0,
+				[Period_Value],
+				Rank_order
+			)
+	MEASURE 'Dynamic_title'[Select_Sale_or_Qty] = SELECTEDVALUE(Sales_Measure[Value_type])
+	MEASURE 'Dynamic_title'[Sale_and_Qty_CY_title] = [Select_time_period_title] & " " & [Select_Sale_or_Qty] & " " & [Current_Year]
+	MEASURE 'Dynamic_title'[Select_time_period_title] = SELECTEDVALUE(Time_Period[Options])
+	MEASURE 'Dynamic_title'[Time_period_title] = [Select_time_period_title] & " " & [Select_Sale_or_Qty]
+	MEASURE 'Dynamic_title'[Sale_and_Qty_PY_title] = [Select_time_period_title] & " " & [Select_Sale_or_Qty] & " " & [Previous_Year]
+	MEASURE 'Dynamic_title'[Sale_Option_PY_Year_title] = SELECTEDVALUE(Sales_Measure[Value_type]) & " " & [Previous_Year]
+	MEASURE 'Dynamic_title'[Sale_Option_CY_Year_title] = SELECTEDVALUE(Sales_Measure[Value_type]) & " " & [Current_Year]
+	MEASURE 'Dynamic_title'[Growth color] = IF(
+			[CY_PY_Growth%] >= 0,
+			"#C2F0C3",
+			"#F6D7D9"
+		)
+	MEASURE 'Dynamic_title'[Growth border color] = IF(
+			[CY_PY_Growth%] >= 0,
+			"#C2F0C3",
+			"#F6D7D9"
+		)
+	MEASURE 'Dynamic_title'[Area_rank_title] = SELECTEDVALUE(Rank_Table[Option]) & " Area Wise" & " " & [Select_Sale_or_Qty]
+	MEASURE 'Dynamic_title'[Product_rank_title] = SELECTEDVALUE(Rank_Table[Option]) & " Products Wise " & [Select_Sale_or_Qty]
+	MEASURE 'Dynamic_title'[Customer_rank_title] = SELECTEDVALUE(Rank_Table[Option]) & " Customers "
+	MEASURE 'Dynamic_title'[Order_count_Label] = "Customer who order more than" & " " & MAX(Order_Filter_Table[Order_Filter_Table]) & " " & "times"
+	MEASURE 'Customer_Measure'[Total_Customer_count] = DISTINCTCOUNT(Master_table[customer_id])
+	MEASURE 'Customer_Measure'[YTD_Customer_Count] = VAR ytd_sys_month = [YTD_Month]
+		RETURN
+			CALCULATE(
+				[Total_Customer_count],
+				'Calendar'[MonthIndex] <= ytd_sys_month
+			)
+	MEASURE 'Customer_Measure'[Period_Value_Customer] = VAR time_filter = SELECTEDVALUE(Time_Period[Value])
+		VAR selected_month = [YTD_Month]
+		VAR start_index = selected_month - time_filter
+		VAR time_period = CALCULATE(
+			[Total_Customer_count],
+			'Calendar'[MonthIndex] >= start_index,
+			'Calendar'[MonthIndex] < selected_month
+		)
+		RETURN
+			IF(
+				time_filter = 0,
+				[YTD_Customer_Count],
+				time_period
+			)
+	MEASURE 'Customer_Measure'[Period_Value_Customer_CY] = VAR CY = [Current_Year]
+		RETURN
+			CALCULATE(
+				[Period_Value_Customer],
+				'Calendar'[Year] = CY
+			)
+	MEASURE 'Customer_Measure'[Period_Value_Customer_PY] = VAR PY = [Previous_Year]
+		RETURN
+			CALCULATE(
+				[Period_Value_Customer],
+				'Calendar'[Year] = PY
+			)
+	MEASURE 'Customer_Measure'[New_Customers] = VAR Filter_Customer = FILTER(
+			(SUMMARIZE(
+				Master_table,
+				Master_table[customer_id]
+			)),
+			[Prev_yr_value] <= 0 && [Cur_Yr_Value] > 0
+		)
+		RETURN
+			CALCULATE(
+				[Period_Value_Customer],
+				Filter_Customer
+			)
+	MEASURE 'Customer_Measure'[Lost_Customers] = VAR Filter_Customer = FILTER(
+			(SUMMARIZE(
+				Master_table,
+				Master_table[customer_id]
+			)),
+			[Prev_yr_value] > 0 && [Cur_Yr_Value] <= 0
+		)
+		RETURN
+			CALCULATE(
+				[Period_Value_Customer],
+				Filter_Customer
+			)
+	MEASURE 'Customer_Measure'[Lost_Customers_Sales] = VAR Filter_Customer = FILTER(
+			(SUMMARIZE(
+				Master_table,
+				Master_table[customer_id]
+			)),
+			[Prev_yr_value] > 0 && [Cur_Yr_Value] <= 0
+		)
+		RETURN
+			CALCULATE(
+				[Period_Value],
+				Filter_Customer
+			)
+	MEASURE 'Customer_Measure'[New_Customers_Sales] = VAR Filter_Customer = FILTER(
+			(SUMMARIZE(
+				Master_table,
+				Master_table[customer_id]
+			)),
+			[Prev_yr_value] <= 0 && [Cur_Yr_Value] > 0
+		)
+		RETURN
+			CALCULATE(
+				[Period_Value],
+				Filter_Customer
+			)
+	MEASURE 'Customer_Measure'[TopN_Customers_by_value] = VAR Rank_value = RANKX(
+			ALL(Master_table[Customer_Name]),
+			[Period_Value],
+			,
+			DESC
+		)
+		VAR _rank = SELECTEDVALUE(Rank_Table[Value])
+		VAR Rank_order = IF(
+			Rank_value <= _rank,
+			[Period_Value],
+			BLANK()
+		)
+		RETURN
+			IF(
+				_rank = 0,
+				[Period_Value],
+				Rank_order
+			)
+	MEASURE 'Customer_Measure'[Customer_Growth_%] = VAR Customer_CY = [Period_Value_Customer_CY]
+		VAR Customer_PY = [Period_Value_Customer_PY]
+		RETURN
+			DIVIDE(
+				Customer_CY - Customer_PY,
+				Customer_PY
+			)
+	MEASURE 'Customer_Measure'[Customer_Order_id_Count] = DISTINCTCOUNT(Master_table[order_id])
+	MEASURE 'Customer_Measure'[Period_Orders_Customer] = VAR time_filter = SELECTEDVALUE(Time_Period[Value])
+		VAR selected_month = [YTD_Month]
+		VAR start_index = selected_month - time_filter
+		VAR time_period = CALCULATE(
+			[Customer_Order_id_Count],
+			'Calendar'[MonthIndex] >= start_index,
+			'Calendar'[MonthIndex] < selected_month
+		)
+		RETURN
+			IF(
+				time_filter = 0,
+				[YTD],
+				time_period
+			)
+	MEASURE 'Customer_Measure'[YTD_Customer_Orders] = VAR ytd_sys_month = [YTD_Month]
+		RETURN
+			CALCULATE(
+				[Customer_Order_id_Count],
+				'Calendar'[MonthIndex] <= ytd_sys_month
+			)
+	MEASURE 'Customer_Measure'[Repeated_Customers] = VAR Customer_Data = SUMMARIZE(
+			Master_table,
+			Master_table[customer_id]
+		)
+		VAR Filterobj = FILTER(
+			Customer_Data,
+			[Period_Orders_Customer] >= 2
+		)
+		RETURN
+			CALCULATE(
+				[Period_Value_Customer],
+				Filterobj
+			)
+	MEASURE 'Customer_Measure'[Repeat_Customer_Count_CY] = VAR CY = [Current_Year]
+		RETURN
+			CALCULATE(
+				[Repeated_Customers],
+				'Calendar'[Year] = CY
+			)
+	MEASURE 'Customer_Measure'[Repeat_Customer_Count_PY] = VAR PY = [Previous_Year]
+		RETURN
+			CALCULATE(
+				[Repeated_Customers],
+				'Calendar'[Year] = PY
+			)
+	MEASURE 'Customer_Measure'[Repeated_Customers_Sale] = VAR Customer_Data = SUMMARIZE(
+			Master_table,
+			Master_table[customer_id]
+		)
+		VAR Filterobj = FILTER(
+			Customer_Data,
+			[Period_Orders_Customer] >= 2
+		)
+		RETURN
+			CALCULATE(
+				[Period_Value],
+				Filterobj
+			)
+	MEASURE 'Customer_Measure'[Repeat_Customer_Sale_PY] = VAR PY = [Previous_Year]
+		RETURN
+			CALCULATE(
+				[Repeated_Customers_Sale],
+				'Calendar'[Year] = PY
+			)
+	MEASURE 'Customer_Measure'[Repeat_Customer_Sale_CY] = VAR CY = [Current_Year]
+		RETURN
+			CALCULATE(
+				[Repeated_Customers_Sale],
+				'Calendar'[Year] = CY
+			)
+	MEASURE 'Customer_Measure'[Repeated_Customers_Dynamic] = VAR order_count = MAX(Order_Filter_Table[Order_Filter_Table])
+		VAR Customer_Data = SUMMARIZE(
+			Master_table,
+			Master_table[customer_id]
+		)
+		VAR Filterobj = FILTER(
+			Customer_Data,
+			[Period_Orders_Customer] >= order_count
+		)
+		VAR Val = CALCULATE(
+			[Period_Value_Customer],
+			Filterobj
+		)
+		RETURN
+			IF(
+				ISBLANK(Val),
+				0,
+				Val
+			)
+	MEASURE 'Customer_Measure'[Total_Feedback] = DISTINCTCOUNT(Master_table[feedback_id])
+	MEASURE 'Customer_Measure'[Period_Feedback] = VAR time_filter = SELECTEDVALUE(Time_Period[Value])
+		VAR selected_month = [YTD_Month]
+		VAR start_index = selected_month - time_filter
+		VAR time_period = CALCULATE(
+			[Total_Feedback],
+			'Calendar'[MonthIndex] >= start_index,
+			'Calendar'[MonthIndex] < selected_month
+		)
+		RETURN
+			IF(
+				time_filter = 0,
+				[YTD_Feedback],
+				time_period
+			)
+	MEASURE 'Customer_Measure'[YTD_Feedback] = VAR ytd_sys_month = [YTD_Month]
+		RETURN
+			CALCULATE(
+				[Total_Feedback],
+				'Calendar'[MonthIndex] <= ytd_sys_month
+			)
+	MEASURE 'Customer_Measure'[Period_Value] = VAR time_filter = SELECTEDVALUE(Time_Period[Value])
+		VAR selected_month = [YTD_Month]
+		VAR start_index = selected_month - time_filter
+		VAR time_period = CALCULATE(
+			[Value],
+			'Calendar'[MonthIndex] >= start_index,
+			'Calendar'[MonthIndex] < selected_month
+		)
+		RETURN
+			IF(
+				time_filter = 0,
+				[YTD],
+				time_period
+			)
+	MEASURE 'Customer_Measure'[Var selected_month] = [YTD_Month]
+	MEASURE 'Customer_Measure'[Period_Inventory_Value] = VAR time_filter = SELECTEDVALUE(Time_Period[Value])
+		VAR selected_month = [YTD_Month]
+		VAR start_index = selected_month - time_filter
+		VAR time_period = CALCULATE(
+			[Inventory_Value],
+			'Calendar'[MonthIndex] >= start_index,
+			'Calendar'[MonthIndex] < selected_month
+		)
+		RETURN
+			IF(
+				time_filter = 0,
+				[Inventory_YTD],
+				time_period
+			)
+	MEASURE 'Order_Filter_Table'[Order_Filter_Table Value] = SELECTEDVALUE(
+			'Order_Filter_Table'[Order_Filter_Table],
+			""
+		)
+	MEASURE 'Inventory_Measures'[Inventory_Value] = SUM(Inventory[Value])
+	MEASURE 'Inventory_Measures'[Inventory_YTD] = VAR ytd_sys_month = [YTD_Month]
+		RETURN
+			CALCULATE(
+				[Inventory_Value],
+				'Calendar'[MonthIndex] <= ytd_sys_month
+			)
+	MEASURE 'Inventory_Measures'[Stock_received] = CALCULATE(
+			[Period_Inventory_Value],
+			Inventory[Stock_Type] = "stock_received"
+		)
+	MEASURE 'Inventory_Measures'[Stock_damaged] = CALCULATE(
+			[Period_Inventory_Value],
+			Inventory[Stock_Type] = "damaged_stock"
+		)
+	MEASURE 'Inventory_Measures'[Instock] = [Period_Inventory_Value] - [Period_Value]
+	MEASURE 'Inventory_Measures'[Sold_Stock_%] = DIVIDE(
+			[Period_Value],
+			[Period_Inventory_Value]
+		)
+	MEASURE 'Inventory_Measures'[Instock_%] = DIVIDE(
+			[Instock],
+			[Period_Inventory_Value]
+		)
+	MEASURE 'Inventory_Measures'[Damaged_Stock_%] = DIVIDE(
+			[Stock_damaged],
+			[Period_Inventory_Value]
+		)
+	MEASURE 'Marketing'[Check_icon] = "https://i.postimg.cc/T3kH1YbJ/check-(5).png"
+	MEASURE 'Marketing_Measures'[Marketing_Value] = SUM(Marketing[Value])
+	MEASURE 'Marketing_Measures'[Marketing_YTD] = VAR ytd_sys_month = [YTD_Month]
+		RETURN
+			CALCULATE(
+				[Marketing_Value],
+				'Calendar'[MonthIndex] <= ytd_sys_month
+			)
+	MEASURE 'Marketing_Measures'[Period_Marketing_Value] = VAR time_filter = SELECTEDVALUE(Time_Period[Value])
+		VAR selected_month = [YTD_Month]
+		VAR start_index = selected_month - time_filter
+		VAR time_period = CALCULATE(
+			[Marketing_Value],
+			'Calendar'[MonthIndex] >= start_index,
+			'Calendar'[MonthIndex] < selected_month
+		)
+		RETURN
+			IF(
+				time_filter = 0,
+				[Marketing_YTD],
+				time_period
+			)
+
+EVALUATE
+	SUMMARIZECOLUMNS(
+		"Current_Year", [Current_Year],
+		"Previous_Year", [Previous_Year],
+		"System_date", [System_date],
+		"Sel_autodate_option", [Sel_autodate_option],
+		"YTD_Month", [YTD_Month],
+		"Value", [Value],
+		"YTD", [YTD],
+		"Cur_Yr_Value", [Cur_Yr_Value],
+		"Prev_yr_value", [Prev_yr_value],
+		"CY_PY_Growth%", [CY_PY_Growth%],
+		"TopN_Area_by_value", [TopN_Area_by_value],
+		"TopN_Product_by_value", [TopN_Product_by_value],
+		"Select_Sale_or_Qty", [Select_Sale_or_Qty],
+		"Sale_and_Qty_CY_title", [Sale_and_Qty_CY_title],
+		"Select_time_period_title", [Select_time_period_title],
+		"Time_period_title", [Time_period_title],
+		"Sale_and_Qty_PY_title", [Sale_and_Qty_PY_title],
+		"Sale_Option_PY_Year_title", [Sale_Option_PY_Year_title],
+		"Sale_Option_CY_Year_title", [Sale_Option_CY_Year_title],
+		"Growth color", [Growth color],
+		"Growth border color", [Growth border color],
+		"Area_rank_title", [Area_rank_title],
+		"Product_rank_title", [Product_rank_title],
+		"Customer_rank_title", [Customer_rank_title],
+		"Order_count_Label", [Order_count_Label],
+		"Total_Customer_count", [Total_Customer_count],
+		"YTD_Customer_Count", [YTD_Customer_Count],
+		"Period_Value_Customer", [Period_Value_Customer],
+		"Period_Value_Customer_CY", [Period_Value_Customer_CY],
+		"Period_Value_Customer_PY", [Period_Value_Customer_PY],
+		"New_Customers", [New_Customers],
+		"Lost_Customers", [Lost_Customers],
+		"Lost_Customers_Sales", [Lost_Customers_Sales],
+		"New_Customers_Sales", [New_Customers_Sales],
+		"TopN_Customers_by_value", [TopN_Customers_by_value],
+		"Customer_Growth_%", [Customer_Growth_%],
+		"Customer_Order_id_Count", [Customer_Order_id_Count],
+		"Period_Orders_Customer", [Period_Orders_Customer],
+		"YTD_Customer_Orders", [YTD_Customer_Orders],
+		"Repeated_Customers", [Repeated_Customers],
+		"Repeat_Customer_Count_CY", [Repeat_Customer_Count_CY],
+		"Repeat_Customer_Count_PY", [Repeat_Customer_Count_PY],
+		"Repeated_Customers_Sale", [Repeated_Customers_Sale],
+		"Repeat_Customer_Sale_PY", [Repeat_Customer_Sale_PY],
+		"Repeat_Customer_Sale_CY", [Repeat_Customer_Sale_CY],
+		"Repeated_Customers_Dynamic", [Repeated_Customers_Dynamic],
+		"Total_Feedback", [Total_Feedback],
+		"Period_Feedback", [Period_Feedback],
+		"YTD_Feedback", [YTD_Feedback],
+		"Period_Value", [Period_Value],
+		"Var selected_month", [Var selected_month],
+		"Period_Inventory_Value", [Period_Inventory_Value],
+		"Order_Filter_Table Value", [Order_Filter_Table Value],
+		"Inventory_Value", [Inventory_Value],
+		"Inventory_YTD", [Inventory_YTD],
+		"Stock_received", [Stock_received],
+		"Stock_damaged", [Stock_damaged],
+		"Instock", [Instock],
+		"Sold_Stock_%", [Sold_Stock_%],
+		"Instock_%", [Instock_%],
+		"Damaged_Stock_%", [Damaged_Stock_%],
+		"Check_icon", [Check_icon],
+		"Marketing_Value", [Marketing_Value],
+		"Marketing_YTD", [Marketing_YTD],
+		"Period_Marketing_Value", [Period_Marketing_Value]
+	)

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "b5a5502487080c2a0d0c",
+  "position": {
+    "x": 995.63597927944681,
+    "y": 346.69875253086343,
+    "z": 23000,
+    "height": 69,
+    "width": 239.99999999999994,
+    "tabOrder": 24000
+  },
+  "visualGroup": {
+    "displayName": "Rep_Cust_Sale",
+    "groupMode": "ScaleMode"
+  }
+}

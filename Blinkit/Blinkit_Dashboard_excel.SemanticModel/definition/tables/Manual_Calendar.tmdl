@@ -1,0 +1,74 @@
+table Manual_Calendar
+	lineageTag: f43dca89-9ba9-4380-98f3-5d09d7e34145
+
+	column Date
+		formatString: General Date
+		lineageTag: 9d1203eb-b1f6-4112-bf31-998c062827c0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Calendar[Date]
+
+		variation Variation
+			isDefault
+			relationship: 1c734951-f265-4873-b45d-8d4388b34750
+			defaultHierarchy: LocalDateTable_1b159c11-ee45-42c4-a8a5-8035fd44ff72.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: d4414299-261f-4cb3-a3bb-1adc332e02af
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Calendar[Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: 9a57380c-f89b-4f29-b750-0d00d41ad8c7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Calendar[Month]
+		sortByColumn: MonthIndex
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month-Yr
+		lineageTag: aefe71a9-bfc9-4333-9309-cdb733df162c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Calendar[Month-Yr]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		lineageTag: c5808589-ff29-42ed-ba27-8eef50f946b9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Calendar[Day]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthIndex
+		formatString: 0
+		lineageTag: bd270bf3-db47-459f-ac33-8c0cd23de2fe
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Calendar[MonthIndex]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quater
+		lineageTag: 937c1b2b-a64d-4af8-afbd-d44320072259
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: Calendar[Quater]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Manual_Calendar = calculated
+		mode: import
+		source = 'Calendar'
+
+	annotation PBI_Id = 916f8dd1ac82423894d21221bc541f6d
+

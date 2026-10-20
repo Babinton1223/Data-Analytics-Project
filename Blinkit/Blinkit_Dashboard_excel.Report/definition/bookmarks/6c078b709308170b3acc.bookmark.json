@@ -1,0 +1,2279 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Customer - Slicer_Panel_off",
+  "name": "6c078b709308170b3acc",
+  "options": {
+    "targetVisualNames": [],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.11",
+    "activeSection": "cfa7c0962c017e37a405",
+    "sections": {
+      "cfa7c0962c017e37a405": {
+        "visualContainers": {
+          "1d6b25da6bda29d63a28": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "7ba0e5be6258f37682fb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "TopN_Customers_by_value"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3b331e50b1dccf0509d5",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Master_table"
+                        }
+                      },
+                      "Property": "Customer_Name"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "TopN_Customers_by_value"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Master_table"
+                        }
+                      },
+                      "Property": "Customer_Name"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "2a73c96f8d7073575a36": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "bf12b03d2e7897d4e3c3",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Rank_Table"
+                        }
+                      },
+                      "Property": "Option"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "r",
+                                "Entity": "Rank_Table",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "r"
+                                            }
+                                          },
+                                          "Property": "Option"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'Top 5'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "ebee12e87320b566656c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2eed125b18cdf1d6fd56",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Period_Value_Customer"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "87d8ba486ed7c58e5d18",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Customer_Growth_%"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9d9c1f3d6fcfeb1a38b3",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "cec9356babefbaa732a3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Year"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineClusteredColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  }
+                ]
+              },
+              "projections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  }
+                ],
+                "Y": [
+                  {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Period_Value_Customer"
+                    }
+                  }
+                ],
+                "Y2": [
+                  {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Customer_Growth_%"
+                    }
+                  }
+                ],
+                "Series": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calendar"
+                        }
+                      },
+                      "Property": "Year"
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "Category": [
+                  {
+                    "expr": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Date_Category_selection"
+                          }
+                        },
+                        "Property": "Parameter"
+                      }
+                    },
+                    "index": 0,
+                    "length": 1
+                  }
+                ]
+              }
+            }
+          },
+          "c1472f510e0518020c77": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "79d4e07711d558e60cb5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales_Measure"
+                        }
+                      },
+                      "Property": "CY_PY_Growth%"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales_Measure"
+                        }
+                      },
+                      "Property": "CY_PY_Growth%"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "1b76d710941d65d6b834": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2b895881284fedf11ea8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Master_table"
+                        }
+                      },
+                      "Property": "Product_Category"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {
+                "merge": {
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "442bf576643299de610a": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "30df46a21902db676ca2": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "e2a22009b2065edbd011": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "a06128818d0164b08433": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "5412ffaed209d7254e2d": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "30a23904a4ed93a6db66",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales_Measure"
+                        }
+                      },
+                      "Property": "Prev_yr_value"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales_Measure"
+                        }
+                      },
+                      "Property": "Prev_yr_value"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "07a3152f8101d00b306e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "97b7f4539f6ce786501c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales_Measure"
+                        }
+                      },
+                      "Property": "Cur_Yr_Value"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales_Measure"
+                        }
+                      },
+                      "Property": "Cur_Yr_Value"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "1a405c3ca69a6cb562d4": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "28f41899284be2340e92": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2d17af2e62ef17adcc3d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "New_Customers"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "447f565058b6b7b3dcdf",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Lost_Customers"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "hundredPercentStackedBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "New_Customers"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "c4c25a6031b909913d1e": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "302d6c1f7ce60c01ec0a": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "da8a9efb14e423214934",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "New_Customers"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "New_Customers"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "79b66639b8473928bd35": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "50411249c7886c06dffe",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Lost_Customers"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Lost_Customers"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "f5c327b6078e979b18c8": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "bedcf64500208ee97b83": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "2b6b1be0355c02474e00": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "0bfadcba6b940c29ab1e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Lost_Customers_Sales"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9c100dd2884f674d7c48",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "New_Customers_Sales"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "hundredPercentStackedBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "New_Customers_Sales"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "af781687d8dde260d97c": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "b2bc3b800e0b893110d8": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e5564a8e9021928a962a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "New_Customers_Sales"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "New_Customers_Sales"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "e59daa85670c407383c4": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2dc61b902b02701bc74c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Lost_Customers_Sales"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Lost_Customers_Sales"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "b83bcb6aeb7de5c92185": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "8fb0a48070ba8502bc63": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "27a6ebca6850e5174930": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "34cf63536b60c719b822": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "ad84b20066eb05472b1e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "3952d5843c490fde901f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales_Measure"
+                        }
+                      },
+                      "Property": "Cur_Yr_Value"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales_Measure"
+                        }
+                      },
+                      "Property": "Cur_Yr_Value"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "35692d506942e5bb63c9": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "35894a755344359004e5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales_Measure"
+                        }
+                      },
+                      "Property": "Prev_yr_value"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales_Measure"
+                        }
+                      },
+                      "Property": "Prev_yr_value"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "0a4beae0b7c162428029": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "1f4a0943c055c18d5316": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "1a153cb13ae9fe4ead37",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales_Measure"
+                        }
+                      },
+                      "Property": "Cur_Yr_Value"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fb66df8584be50571bdf",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales_Measure"
+                        }
+                      },
+                      "Property": "Prev_yr_value"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "hundredPercentStackedBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales_Measure"
+                        }
+                      },
+                      "Property": "Cur_Yr_Value"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "dceaf2ec540607d0e2b4": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "dfd8d0b6ea042c5e60a1": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "9e06da729cd229735c31": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "24da83a9036b66a32d0e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Order_Filter_Table"
+                        }
+                      },
+                      "Property": "Order_Filter_Table"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "o",
+                                "Entity": "Order_Filter_Table",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "Comparison": {
+                                    "ComparisonKind": 0,
+                                    "Left": {
+                                      "Column": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Source": "o"
+                                          }
+                                        },
+                                        "Property": "Order_Filter_Table"
+                                      }
+                                    },
+                                    "Right": {
+                                      "Literal": {
+                                        "Value": "4D"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "numericStart": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "4D"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Order_Filter_Table"
+                        }
+                      },
+                      "Property": "Order_Filter_Table"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "8b4c83af415309a3761e": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "bf4269ef190d3e568001": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "0c9924ec34d91db717e3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Repeated_Customers_Dynamic"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Repeated_Customers_Dynamic"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "6435706a2ad70b6c6106": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "9b4578a781d427326604": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "800f06f5280b0dc50933": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "f65044a341d5804698eb": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "c015e13d2fd544f270a1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Period_Value_Customer_CY"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Period_Value_Customer_CY"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "f1ddc991a7a093dc6d37": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "039f59c2072091160c15",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Period_Value_Customer_PY"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Period_Value_Customer_PY"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "7604535c5ec8b470c64b": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "2ff9a4e17d706e651b4e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2142e97ef4fee50014c6",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Period_Value_Customer_CY"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7aa7b08c2b9fdba3cd11",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Period_Value_Customer_PY"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "hundredPercentStackedBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Period_Value_Customer_CY"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "d7c04a6cc53894e07be3": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "d9f4eb707a51e04dde16": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "5579b65498070201a760": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "3c3c6af22f0ceae3d562",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Repeat_Customer_Count_CY"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Repeat_Customer_Count_CY"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "f9b173dc98c442c33801": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "4ae9ae4989f7fa3d7412",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Repeat_Customer_Count_PY"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Repeat_Customer_Count_PY"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "bf6605c60eb5bc33201b": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "9289dd6563580d8a1a08": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d9663b5e07bd152542d7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Repeat_Customer_Count_CY"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2868af20a04aa7ba66c5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Repeat_Customer_Count_PY"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "hundredPercentStackedBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Repeat_Customer_Count_CY"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "ef32e2115729ab1dd756": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "32947f278308d06000d7": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "767400460175720b2bd4": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "cc5aeb807f07c9af64b0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Repeat_Customer_Sale_CY"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Repeat_Customer_Sale_CY"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "2da15699a7ae0be0127a": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2bcc515b5ed5ef747765",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Repeat_Customer_Sale_PY"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Repeat_Customer_Sale_PY"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "570eb20f90ee6041c61a": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "89080f021000bcc1081c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "97b6597b6fd2147c4f8c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Repeat_Customer_Sale_CY"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4fc593a508e6a10ea4b6",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Repeat_Customer_Sale_PY"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "hundredPercentStackedBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer_Measure"
+                        }
+                      },
+                      "Property": "Repeat_Customer_Sale_CY"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "63bdbf0b24752a87b6eb": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "405e5f5d5ad5caddeb04": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "013d37ff6bba517e4f22",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date_Category_selection"
+                        }
+                      },
+                      "Property": "Parameter"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "Date_Category_selection",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "d"
+                                            }
+                                          },
+                                          "Property": "Parameter Fields"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'''Calendar''[Month]'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Date_Category_selection"
+                        }
+                      },
+                      "Property": "Parameter"
+                    }
+                  }
+                ]
+              },
+              "cachedFilterDisplayItems": [
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Date_Category_selection"
+                              }
+                            },
+                            "Property": "Parameter Fields"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'''Calendar''[Month]'"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "Month"
+                }
+              ]
+            }
+          },
+          "027e1d48a706ca7ae563": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a8c6df3aaee40ae01ada",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sales_Measure"
+                        }
+                      },
+                      "Property": "Value_Type"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "s",
+                                "Entity": "Sales_Measure",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "s"
+                                            }
+                                          },
+                                          "Property": "Value_Type"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'Value'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "b45b030b0a712d6ee42b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "5f20bb4668697e8e4ceb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Manual_Calendar"
+                        }
+                      },
+                      "Property": "Year"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Manual_Calendar"
+                        }
+                      },
+                      "Property": "Year"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "176f8989a5344ea67432": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "47914412ab5082ef9c99",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Master_table"
+                        }
+                      },
+                      "Property": "Customer_Name"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Master_table"
+                        }
+                      },
+                      "Property": "Customer_Name"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "7441f127c944ab541b2d": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "8a01c0d4e204f965f0b2",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Master_table"
+                        }
+                      },
+                      "Property": "area"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Master_table"
+                        }
+                      },
+                      "Property": "area"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "e81d05f579cb749b1191": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ea224a4a82f761d800b0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Manual_Calendar"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "m",
+                                "Entity": "Manual_Calendar",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "m"
+                                            }
+                                          },
+                                          "Property": "Month"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'Sep'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Manual_Calendar"
+                        }
+                      },
+                      "Property": "Month"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "50646e5d3b30697b41ec": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "4e1bff520f37d8ef9a29",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Time_Period"
+                        }
+                      },
+                      "Property": "Options"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "t",
+                                "Entity": "Time_Period",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "t"
+                                            }
+                                          },
+                                          "Property": "Options"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'Last 3 Months'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "16c9152e528814bbc0ba": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "4458b3875826139e0971": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e4ada342d2e3abb27f81",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Autodate"
+                        }
+                      },
+                      "Property": "Option"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {}
+            }
+          },
+          "4fca39b5c4c196b050ca": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "6b82d50298110c2aec60": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "ac16e9c066122d37c042": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          }
+        },
+        "visualContainerGroups": {
+          "5d5efd6fb64b5e8d08bb": {
+            "children": {
+              "a79afd8818b0b14d8ca8": {
+                "isHidden": false
+              }
+            }
+          },
+          "14ea2eee80cb0008730e": {
+            "children": {
+              "1e64fc700504e4b3d1dc": {
+                "isHidden": false
+              }
+            }
+          },
+          "00fa8ffeb001350961e1": {
+            "children": {
+              "1e59b36fd427be629dc9": {
+                "isHidden": false
+              }
+            }
+          },
+          "d06b4c5b005a0d0b9299": {
+            "children": {
+              "1767941fbc7400969bd6": {
+                "isHidden": false
+              }
+            }
+          },
+          "557ee2e00157595bbebd": {
+            "children": {
+              "f7e67e858077a3646e33": {
+                "isHidden": false
+              }
+            }
+          },
+          "b5a5502487080c2a0d0c": {
+            "children": {
+              "38125a00a5ca61a99704": {
+                "isHidden": false
+              }
+            }
+          },
+          "fd9343701253119e47a6": {
+            "isHidden": true
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

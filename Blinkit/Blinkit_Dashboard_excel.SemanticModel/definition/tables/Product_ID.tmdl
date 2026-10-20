@@ -1,0 +1,40 @@
+table Product_ID
+	lineageTag: 19606210-59a1-4af2-a7df-6e5a94ce7826
+
+	column Product_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 087da88a-b891-4bca-b94d-93e7d22720d2
+		summarizeBy: none
+		sourceColumn: Product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Products_Category
+		dataType: string
+		lineageTag: a858b7cc-274a-43aa-a56f-c138fba1ba89
+		summarizeBy: none
+		sourceColumn: Products_Category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Product_ID = m
+		mode: import
+		source =
+				let
+				    Source = #"Dataset - Excel",
+				    Content = Source{10}[Content],
+				    #"Imported Excel Workbook" = Excel.Workbook(Content),
+				    Sheet1_Sheet = #"Imported Excel Workbook"{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Product_id", Int64.Type}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Changed Type", {"Product_id"}, Products, {"product_id"}, "Products", JoinKind.LeftOuter),
+				    #"Expanded Products" = Table.ExpandTableColumn(#"Merged Queries", "Products", {"category"}, {"Products.category"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Expanded Products",{{"Products.category", "Products_Category"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,12 @@
+relationship eca5da56-e1d8-4fa8-833f-80f1d81a9fc8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Amazon.Date
+	toColumn: LocalDateTable_a7819df9-68ab-43fd-af41-36fade7c3204.Date
+
+relationship 5701d44e-36e5-34f2-b1ca-c3c5d9b96ad9
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'amazon-fashion - YT'.asin
+	toColumn: Amazon.ASIN
+

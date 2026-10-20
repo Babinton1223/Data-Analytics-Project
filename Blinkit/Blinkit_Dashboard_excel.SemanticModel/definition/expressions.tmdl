@@ -1,0 +1,135 @@
+expression 'Dataset - Excel' =
+		let
+		    Source = Folder.Files("C:\Users\jbabinto\Downloads\Blink_it_Data\Dataset - Excel"),
+		    #"Removed Other Columns" = Table.SelectColumns(Source,{"Name", "Content"})
+		in
+		    #"Removed Other Columns"
+	lineageTag: da28f58f-2a79-434a-91b2-9381c7d79867
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Customer =
+		let
+		    Source = #"Dataset - Excel",
+		    Content = Source{0}[Content],
+		    #"Imported CSV" = Csv.Document(Content,[Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Imported CSV", [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"customer_id", Int64.Type}, {"customer_name", type text}, {"email", type text}, {"phone", Int64.Type}, {"address", type text}, {"area", type text}, {"pincode", Int64.Type}, {"registration_date", type date}, {"customer_segment", type text}, {"total_orders", Int64.Type}, {"avg_order_value", type number}})
+		in
+		    #"Changed Type"
+	lineageTag: cb9477a7-d596-466f-bf55-2b24bfc75ad2
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Customer_Feedback =
+		let
+		    Source = #"Dataset - Excel",
+		    Content = Source{1}[Content],
+		    #"Imported CSV" = Csv.Document(Content,[Delimiter=",", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.Csv]),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Imported CSV", [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"feedback_id", Int64.Type}, {"order_id", Int64.Type}, {"customer_id", Int64.Type}, {"rating", Int64.Type}, {"feedback_text", type text}, {"feedback_category", type text}, {"sentiment", type text}, {"feedback_date", type datetime}})
+		in
+		    #"Changed Type"
+	lineageTag: 61f1b490-ae15-4b20-a6e2-7f4619772f60
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Delivery_Performance =
+		let
+		    Source = #"Dataset - Excel",
+		    Content = Source{3}[Content],
+		    #"Imported CSV" = Csv.Document(Content,[Delimiter=",", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Imported CSV", [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"order_id", Int64.Type}, {"delivery_partner_id", Int64.Type}, {"promised_time", type datetime}, {"actual_time", type datetime}, {"delivery_time_minutes", Int64.Type}, {"distance_km", type number}, {"delivery_status", type text}, {"reasons_if_delayed", type text}})
+		in
+		    #"Changed Type"
+	lineageTag: 478a4000-5b02-4642-9676-36162259183d
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Products =
+		let
+		    Source = #"Dataset - Excel",
+		    Content = Source{8}[Content],
+		    #"Imported CSV" = Csv.Document(Content,[Delimiter=",", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Imported CSV", [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"product_id", Int64.Type}, {"product_name", type text}, {"category", type text}, {"brand", type text}, {"price", type number}, {"mrp", type number}, {"margin_percentage", Int64.Type}, {"shelf_life_days", Int64.Type}, {"min_stock_level", Int64.Type}, {"max_stock_level", Int64.Type}}),
+		    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","�","",Replacer.ReplaceText,{"product_name"})
+		in
+		    #"Replaced Value"
+	lineageTag: 2bf8fba8-b6cd-4fa6-bf0b-a3db5de099b2
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Orders =
+		let
+		    Source = #"Dataset - Excel",
+		    Content = Source{6}[Content],
+		    #"Imported CSV" = Csv.Document(Content,[Delimiter=",", Columns=10, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Imported CSV", [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"order_id", Int64.Type}, {"customer_id", Int64.Type}, {"order_date", type datetime}, {"promised_delivery_time", type datetime}, {"actual_delivery_time", type datetime}, {"delivery_status", type text}, {"order_total", type number}, {"payment_method", type text}, {"delivery_partner_id", Int64.Type}, {"store_id", Int64.Type}})
+		in
+		    #"Changed Type"
+	lineageTag: 73d906c4-e502-4e12-a68d-09d695bbb320
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Order_Items =
+		let
+		    Source = #"Dataset - Excel",
+		    Content = Source{7}[Content],
+		    #"Imported CSV" = Csv.Document(Content,[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Imported CSV", [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"order_id", Int64.Type}, {"product_id", Int64.Type}, {"quantity", Int64.Type}, {"unit_price", type number}, {"total_price", type number}})
+		in
+		    #"Changed Type"
+	lineageTag: 7f59abee-412d-4a1a-ba16-639784e5276f
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Category =
+		let
+		    Source = #"Dataset - Excel",
+		    Content = Source{9}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(Content),
+		    Sheet1_Sheet = #"Imported Excel Workbook"{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"category", type text}, {"Img", type text}})
+		in
+		    #"Changed Type"
+	lineageTag: a57ba941-c3b7-4603-8f18-030a263d06af
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Rating =
+		let
+		    Source = #"Dataset - Excel",
+		    Content = Source{11}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(Content),
+		    Sheet1_Sheet = #"Imported Excel Workbook"{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Rating", Int64.Type}, {"Emoji", type text}, {"Star", type text}})
+		in
+		    #"Changed Type"
+	lineageTag: 8f7d2d78-54a9-46cd-81bd-69c6eb7c5cc1
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

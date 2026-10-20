@@ -1,0 +1,7454 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "amazonfashion__YT": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "amazon-fashion - YT": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "amazon fashion YT": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "YT": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "fashion YT": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.amazon_prime_y_or_n": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "amazon_prime__y_or_n"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "amazon prime y or n": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "amazon_prime__y_or_n": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "amazon prime y": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "y": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "prime y": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "amazon prime y n": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "n": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.asin": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "asin"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "asin": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.best_seller_tag_y_or_n": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "best_seller_tag__y_or_n"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "best seller tag y or n": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "best_seller_tag__y_or_n": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "best seller tag y": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "y": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "tag y": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "seller tag y": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "best seller tag y n": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "n": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.brand": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "brand"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "brand": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "marque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "make": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "trademark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "strain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "cast": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "marker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.colour": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "colour"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "colour": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.delivery_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "delivery_type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "delivery type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "delivery_type": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "delivery category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "delivery genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "delivery manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "delivery variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "delivery brand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "delivery class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "delivery kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "delivery style": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "delivery form": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "delivery grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.discount_percentage": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "discount_percentage"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "discount percentage": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "discount_percentage": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "discount ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "discount measurement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "discount calculation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "discount fraction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "discount proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "discount part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "discount section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "discount entitlement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "discount take": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "discount profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.left_in_stock": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "left_in_stock"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "left in stock": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "left_in_stock": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "stock": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "in stock": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "left": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "in inventory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "inventory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "left in inventory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "left-hand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "port": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "missing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.no_of_reviews": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "no_of_reviews"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "no of reviews": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "no of review": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "no_of_reviews": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "number of review": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.description": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "description"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "description": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "appearance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "descriptor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "specification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "account": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "overview": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.product_detail": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "product_details"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product detail": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product_details": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "detail": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "artifact detail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "item detail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "merchandise detail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "produce detail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "product aspect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "product element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "product fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "aspect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.product_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "product_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product_name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "product": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "artifact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "product nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "product title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "product label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "product tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "item": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "merchandise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "produce": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "artifact name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "item name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.product_url": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "product_url"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product url": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product_url": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "url": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "product website": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "website": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "product site": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "site": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "artifact url": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "product web address": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.589
+			          }
+			        },
+			        {
+			          "item url": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "merchandise url": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "produce url": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "web address": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.571
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.rating": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "rating"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rating": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "evaluation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "score": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ranking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "mark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "sailor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "seaman": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "hand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.sales_price": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "sales_price"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sales price": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sale price": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "sales_price": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "price": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sale value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale fee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale bill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale expense": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.seller_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "seller_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "seller name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "seller_name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "seller": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "seller nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "seller title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "seller label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "seller tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "vender": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "vendor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "retailer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "wholesaler": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "supplier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "trader": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.seller_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "Seller ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "seller ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "seller": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "seller identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "seller identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "seller identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "seller credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "vender": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "vendor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "retailer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "wholesaler": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "supplier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "trader": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.large_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "large.1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "large.1": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "Category"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "category": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT.reviews": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "amazon-fashion - YT",
+			          "ConceptualProperty": "reviews"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reviews": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "appraisal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "evaluation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "examination": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "analysis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "criticism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "journal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "publication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "periodical": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "magazine": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "sale_option": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sale_Option"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sale option": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Sale_Option": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "option": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sale selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sale decision": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sale possibility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sale opportunity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sale preference": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "selection": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "decision": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "possibility": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "opportunity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "preference": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "sale_option.type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sale_Option",
+			          "ConceptualProperty": "Type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "form": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "sale_option.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Sale_Option",
+			          "ConceptualProperty": "Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "amazon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "amazon": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.order_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Order ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "edict": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "command": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "directive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "demand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "amazon.date.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "amazon.date.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "amazon.date.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "amazon.date.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "amazon.date.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "amazon.status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "status": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "position": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.fulfilment": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Fulfilment"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fulfilment": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.sales_channel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Sales Channel "
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sales channel": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sale channel": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "channel": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sale frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "sale station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale network": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "network": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "sale conduit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "sale waterway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "conduit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.shipservicelevel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "ship-service-level"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ship-service-level": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ship service level": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "level": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "service level": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ship-service-quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "ship-service-threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "ship service quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "ship service threshold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "ship-service-amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "ship-service-grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "ship-service-point": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "ship-service-rank": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "ship-service-tier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "service quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.style": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Style"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "style": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "panache": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "elegance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "stylishness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "flair": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "smartness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "chic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "bravura": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "grace": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "polish": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.sku": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "SKU"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sku": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Category"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "category": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.size": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Size"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "size": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "magnitude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "scope": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "dimension": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "mass": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "bulk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.asin": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "ASIN"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "asin": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.courier_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Courier Status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "courier status": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "courier category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "courier importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "courier prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "courier prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "courier condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "courier class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "courier grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "courier level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "courier position": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "courier rank": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.qty": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Qty"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qty": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.currency": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "currency"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "currency": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "money": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "coinage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "exchange": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "cash": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "prevalence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "popularity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "vogue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "circulation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "commonness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.shipcity": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "ship-city"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ship-city": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ship city": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "city": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ship-location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "ship-metropolis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "ship-municipality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "ship location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ship metropolis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ship municipality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ship-town": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "ship-metropolitan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "metropolis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.shipstate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "ship-state"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ship-state": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ship state": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "state": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ship-location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "ship-province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "ship-territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "ship-nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "ship location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ship province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ship territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ship nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ship-condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.shippostalcode": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "ship-postal-code"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ship-postal-code": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ship postal code": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ship-postal-id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "ship postal id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "ship-postal-key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "ship postal key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.shipcountry": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "ship-country"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ship-country": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ship country": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "country": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ship-nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "ship-location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "ship nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ship location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.fulfilledby": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "fulfilled-by"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fulfilled-by": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fulfilled by": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.amount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Amount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "amount": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "expanse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.total_amount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Total_Amount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total amount": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Total_Amount": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "total quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total expanse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total sum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.sales_amount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Sales_Amount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sales amount": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Sales_Amount": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "sales": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "sale amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "sale quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sale volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sale expanse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sale extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sale sum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sale aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "Overall_Sales": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.sales_units": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Sales_Units"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sales units": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Sales_Units": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "units": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "unit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "sale unit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.filter_sales": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Filter_Sales"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "filter sales": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Filter_Sales": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "sales": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "filter sale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "sale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "Actual_Sales": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.overall_sales": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Overall_Sales"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "overall sales": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Overall_Sales": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "sales": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "overall sale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "sale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.return": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Return"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "return": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "reappearance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "reoccurrence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "homecoming": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "arrival": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "benefit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.sale_units_measure": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Sale_units_measure"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sale units measure": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Sale_units_measure": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "measure": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "units measure": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sale unit measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.677
+			          }
+			        },
+			        {
+			          "unit measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.667
+			          }
+			        },
+			        {
+			          "sale unit degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "sale unit quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "sale unit quota": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "sale unit extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "unit degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "unit quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "unit quota": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "unit extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "Sale_Units": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.sale_amount_measure": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Sale_amount_measure"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sale amount measure": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Sale_amount_measure": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "measure": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "amount measure": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sale amount degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "sale amount quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "sale amount quota": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "sale amount extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "amount degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "amount quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "amount quota": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "amount extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sale amount amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "sale amount portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "Sales_Amount": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.instock_qty": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Instock_Qty"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "instock qty": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Instock_Qty": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.dynamic_city": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Dynamic city"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dynamic city": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "city": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dynamic location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dynamic metropolis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dynamic municipality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "metropolis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "municipality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "dynamic town": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dynamic metropolitan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "town": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "metropolitan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.dynamic_state": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Dynamic State"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dynamic state": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "state": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dynamic location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dynamic province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dynamic territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dynamic nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "dynamic condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dynamic country": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.dynamic_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Dynamic date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dynamic date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dynamic moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dynamic period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "amazon.dynamic_sales": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Amazon",
+			          "ConceptualProperty": "Dynamic sales"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dynamic sales": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sales": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dynamic sale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "sale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "sale_option_has_amazon_dynamic_sales": {
+			      "Binding": {
+			        "ConceptualEntity": "Sale_Option"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale_option": {
+			          "Target": {
+			            "Entity": "sale_option"
+			          }
+			        },
+			        "amazon.dynamic_sales": {
+			          "Target": {
+			            "Entity": "amazon.dynamic_sales"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale_option"
+			            },
+			            "Object": {
+			              "Role": "amazon.dynamic_sales"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sale_options_have_dynamic_sales"
+			        }
+			      ]
+			    },
+			    "sale_option_has_amazon_dynamic_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Sale_Option"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale_option": {
+			          "Target": {
+			            "Entity": "sale_option"
+			          }
+			        },
+			        "amazon.dynamic_date": {
+			          "Target": {
+			            "Entity": "amazon.dynamic_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale_option"
+			            },
+			            "Object": {
+			              "Role": "amazon.dynamic_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sale_options_have_dynamic_date"
+			        }
+			      ]
+			    },
+			    "sale_option_has_amazon_dynamic_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Sale_Option"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale_option": {
+			          "Target": {
+			            "Entity": "sale_option"
+			          }
+			        },
+			        "amazon.dynamic_state": {
+			          "Target": {
+			            "Entity": "amazon.dynamic_state"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale_option"
+			            },
+			            "Object": {
+			              "Role": "amazon.dynamic_state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sale_options_have_dynamic_state"
+			        }
+			      ]
+			    },
+			    "sale_option_has_amazon_dynamic_city": {
+			      "Binding": {
+			        "ConceptualEntity": "Sale_Option"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale_option": {
+			          "Target": {
+			            "Entity": "sale_option"
+			          }
+			        },
+			        "amazon.dynamic_city": {
+			          "Target": {
+			            "Entity": "amazon.dynamic_city"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale_option"
+			            },
+			            "Object": {
+			              "Role": "amazon.dynamic_city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sale_options_have_dynamic_city"
+			        }
+			      ]
+			    },
+			    "amazon_has_instock_qty": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.instock_qty": {
+			          "Target": {
+			            "Entity": "amazon.instock_qty"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.instock_qty"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_instock_qties"
+			        }
+			      ]
+			    },
+			    "amazon_has_sale_amount_measure": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.sale_amount_measure": {
+			          "Target": {
+			            "Entity": "amazon.sale_amount_measure"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.sale_amount_measure"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_sale_amount_measure"
+			        }
+			      ]
+			    },
+			    "amazon_has_sale_units_measure": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.sale_units_measure": {
+			          "Target": {
+			            "Entity": "amazon.sale_units_measure"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.sale_units_measure"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_sale_units_measure"
+			        }
+			      ]
+			    },
+			    "amazon_has_return": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.return": {
+			          "Target": {
+			            "Entity": "amazon.return"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.return"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_return"
+			        }
+			      ]
+			    },
+			    "sale_option_has_amazon_overall_sales": {
+			      "Binding": {
+			        "ConceptualEntity": "Sale_Option"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale_option": {
+			          "Target": {
+			            "Entity": "sale_option"
+			          }
+			        },
+			        "amazon.overall_sales": {
+			          "Target": {
+			            "Entity": "amazon.overall_sales"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale_option"
+			            },
+			            "Object": {
+			              "Role": "amazon.overall_sales"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sale_options_have_overall_sales"
+			        }
+			      ]
+			    },
+			    "amazon_has_overall_sales": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.overall_sales": {
+			          "Target": {
+			            "Entity": "amazon.overall_sales"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.overall_sales"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_overall_sales"
+			        }
+			      ]
+			    },
+			    "sale_option_has_amazon_filter_sales": {
+			      "Binding": {
+			        "ConceptualEntity": "Sale_Option"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale_option": {
+			          "Target": {
+			            "Entity": "sale_option"
+			          }
+			        },
+			        "amazon.filter_sales": {
+			          "Target": {
+			            "Entity": "amazon.filter_sales"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale_option"
+			            },
+			            "Object": {
+			              "Role": "amazon.filter_sales"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sale_options_have_filter_sales"
+			        }
+			      ]
+			    },
+			    "amazon_has_filter_sales": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.filter_sales": {
+			          "Target": {
+			            "Entity": "amazon.filter_sales"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.filter_sales"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_filter_sales"
+			        }
+			      ]
+			    },
+			    "amazon_has_sales_units": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.sales_units": {
+			          "Target": {
+			            "Entity": "amazon.sales_units"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.sales_units"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_sales_units"
+			        }
+			      ]
+			    },
+			    "amazon_has_sales_amount": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.sales_amount": {
+			          "Target": {
+			            "Entity": "amazon.sales_amount"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.sales_amount"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_sales_amount"
+			        }
+			      ]
+			    },
+			    "amazon_has_total_amount": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.total_amount": {
+			          "Target": {
+			            "Entity": "amazon.total_amount"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.total_amount"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_total_amounts"
+			        }
+			      ]
+			    },
+			    "amazon_has_amount": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.amount": {
+			          "Target": {
+			            "Entity": "amazon.amount"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.amount"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_amounts"
+			        }
+			      ]
+			    },
+			    "amazon_has_fulfilledby": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.fulfilledby": {
+			          "Target": {
+			            "Entity": "amazon.fulfilledby"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.fulfilledby"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_fulfilledby"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "amazon.fulfilledby"
+			            },
+			            "Verbs": [
+			              {
+			                "fulfil": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "amazon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.95,
+			          "ID": "fulfilledby_fulfil_amazons"
+			        }
+			      ]
+			    },
+			    "amazon_has_shipcountry": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.shipcountry": {
+			          "Target": {
+			            "Entity": "amazon.shipcountry"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.shipcountry"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_shipcountries"
+			        }
+			      ]
+			    },
+			    "amazon_has_shippostalcode": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.shippostalcode": {
+			          "Target": {
+			            "Entity": "amazon.shippostalcode"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.shippostalcode"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_shippostalcodes"
+			        }
+			      ]
+			    },
+			    "amazon_has_shipstate": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.shipstate": {
+			          "Target": {
+			            "Entity": "amazon.shipstate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.shipstate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_shipstates"
+			        }
+			      ]
+			    },
+			    "amazon_has_shipcity": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.shipcity": {
+			          "Target": {
+			            "Entity": "amazon.shipcity"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.shipcity"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_shipcities"
+			        }
+			      ]
+			    },
+			    "amazon_has_currency": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.currency": {
+			          "Target": {
+			            "Entity": "amazon.currency"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.currency"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_currencies"
+			        }
+			      ]
+			    },
+			    "amazon_has_qty": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.qty": {
+			          "Target": {
+			            "Entity": "amazon.qty"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.qty"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_qties"
+			        }
+			      ]
+			    },
+			    "amazon_has_courier_status": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.courier_status": {
+			          "Target": {
+			            "Entity": "amazon.courier_status"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.courier_status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_courier_statuses"
+			        }
+			      ]
+			    },
+			    "amazon_has_asin": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.asin": {
+			          "Target": {
+			            "Entity": "amazon.asin"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.asin"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_asins"
+			        }
+			      ]
+			    },
+			    "amazon_has_size": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.size": {
+			          "Target": {
+			            "Entity": "amazon.size"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.size"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_sizes"
+			        }
+			      ]
+			    },
+			    "amazon_has_category": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.category": {
+			          "Target": {
+			            "Entity": "amazon.category"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_categories"
+			        }
+			      ]
+			    },
+			    "amazon_has_sku": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.sku": {
+			          "Target": {
+			            "Entity": "amazon.sku"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.sku"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_skus"
+			        }
+			      ]
+			    },
+			    "amazon_has_style": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.style": {
+			          "Target": {
+			            "Entity": "amazon.style"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.style"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_styles"
+			        }
+			      ]
+			    },
+			    "amazon_has_shipservicelevel": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.shipservicelevel": {
+			          "Target": {
+			            "Entity": "amazon.shipservicelevel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.shipservicelevel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_shipservicelevels"
+			        }
+			      ]
+			    },
+			    "amazon_has_sales_channel": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.sales_channel": {
+			          "Target": {
+			            "Entity": "amazon.sales_channel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.sales_channel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_sales_channels"
+			        }
+			      ]
+			    },
+			    "amazon_has_fulfilment": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.fulfilment": {
+			          "Target": {
+			            "Entity": "amazon.fulfilment"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.fulfilment"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_fulfilments"
+			        }
+			      ]
+			    },
+			    "amazon_has_status": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.status": {
+			          "Target": {
+			            "Entity": "amazon.status"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_statuses"
+			        }
+			      ]
+			    },
+			    "amazon_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.date": {
+			          "Target": {
+			            "Entity": "amazon.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_dates"
+			        }
+			      ]
+			    },
+			    "amazon_has_order_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.order_ID": {
+			          "Target": {
+			            "Entity": "amazon.order_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Object": {
+			              "Role": "amazon.order_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_have_order_ID"
+			        }
+			      ]
+			    },
+			    "sale_option_has_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Sale_Option"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale_option": {
+			          "Target": {
+			            "Entity": "sale_option"
+			          }
+			        },
+			        "sale_option.name": {
+			          "Target": {
+			            "Entity": "sale_option.name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale_option"
+			            },
+			            "Object": {
+			              "Role": "sale_option.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sale_options_have_names"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "sale_option"
+			            },
+			            "Name": {
+			              "Role": "sale_option.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "names_are_names_IDs_of_sale_options"
+			        }
+			      ]
+			    },
+			    "sale_option_has_type": {
+			      "Binding": {
+			        "ConceptualEntity": "Sale_Option"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale_option": {
+			          "Target": {
+			            "Entity": "sale_option"
+			          }
+			        },
+			        "sale_option.type": {
+			          "Target": {
+			            "Entity": "sale_option.type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale_option"
+			            },
+			            "Object": {
+			              "Role": "sale_option.type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sale_options_have_types"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_reviews": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.reviews": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.reviews"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.reviews"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_reviews"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_category": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.category": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.category"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_categories"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_large_1": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.large_1": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.large_1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.large_1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_large_1"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_seller_ID": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.seller_ID": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.seller_ID"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.seller_ID"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_seller_ID"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT.seller_ID"
+			            },
+			            "Verbs": [
+			              {
+			                "sell": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "amazonfashion__YT"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "seller_ID_sell_amazonfashion__YT"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT.seller_ID"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "seller_ID_have_amazonfashion__YT"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_seller_name": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.seller_name": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.seller_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.seller_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_seller_names"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT.seller_name"
+			            },
+			            "Verbs": [
+			              {
+			                "sell": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "amazonfashion__YT"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "seller_names_sell_amazonfashion__YT"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT.seller_name"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "seller_names_have_amazonfashion__YT"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_sales_price": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.sales_price": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.sales_price"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.sales_price"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_sales_prices"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "amazonfashion__YT.sales_price"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_price_indicates_how_expensive_amazonfashion__YT_are"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_rating": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.rating": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.rating"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.rating"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_rating"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_product_url": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.product_url": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.product_url"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.product_url"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_product_urls"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_product_name": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.product_name": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.product_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.product_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_product_names"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_product_detail": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.product_detail": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.product_detail"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.product_detail"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_product_details"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_description": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.description": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.description"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.description"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_descriptions"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_no_of_reviews": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.no_of_reviews": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.no_of_reviews"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.no_of_reviews"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_no_of_reviews"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_left_in_stock": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.left_in_stock": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.left_in_stock"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.left_in_stock"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_left_in_stock"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_discount_percentage": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.discount_percentage": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.discount_percentage"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.discount_percentage"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_discount_percentages"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_delivery_type": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.delivery_type": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.delivery_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.delivery_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_delivery_types"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_colour": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.colour": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.colour"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.colour"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_colours"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_brand": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.brand": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.brand"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.brand"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_brands"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_best_seller_tag_y_or_n": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.best_seller_tag_y_or_n": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.best_seller_tag_y_or_n"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.best_seller_tag_y_or_n"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_best_seller_tag_y_or_n"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_amazon_prime_y_or_n": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazonfashion__YT.amazon_prime_y_or_n": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT.amazon_prime_y_or_n"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazonfashion__YT.amazon_prime_y_or_n"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_amazon_prime_y_or_n"
+			        }
+			      ]
+			    },
+			    "sale_option_in_amazon_dynamic_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Sale_Option"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale_option": {
+			          "Target": {
+			            "Entity": "sale_option"
+			          }
+			        },
+			        "amazon.dynamic_state": {
+			          "Target": {
+			            "Entity": "amazon.dynamic_state"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "amazon.dynamic_state"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "sale_option"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "amazon.dynamic_state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sale_options_are_in_dynamic_state"
+			        }
+			      ]
+			    },
+			    "sale_option_in_amazon_dynamic_city": {
+			      "Binding": {
+			        "ConceptualEntity": "Sale_Option"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale_option": {
+			          "Target": {
+			            "Entity": "sale_option"
+			          }
+			        },
+			        "amazon.dynamic_city": {
+			          "Target": {
+			            "Entity": "amazon.dynamic_city"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "amazon.dynamic_city"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "sale_option"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "amazon.dynamic_city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sale_options_are_in_dynamic_city"
+			        }
+			      ]
+			    },
+			    "amazon_in_shipcountry": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.shipcountry": {
+			          "Target": {
+			            "Entity": "amazon.shipcountry"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "amazon.shipcountry"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "amazon.shipcountry"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_are_in_shipcountries"
+			        }
+			      ]
+			    },
+			    "amazon_in_shipstate": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.shipstate": {
+			          "Target": {
+			            "Entity": "amazon.shipstate"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "amazon.shipstate"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "amazon.shipstate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_are_in_shipstates"
+			        }
+			      ]
+			    },
+			    "amazon_in_shipcity": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        },
+			        "amazon.shipcity": {
+			          "Target": {
+			            "Entity": "amazon.shipcity"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "amazon.shipcity"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "amazon"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "amazon.shipcity"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazons_are_in_shipcities"
+			        }
+			      ]
+			    },
+			    "amazonfashion__YT_has_amazon": {
+			      "Binding": {
+			        "ConceptualEntity": "amazon-fashion - YT"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazonfashion__YT": {
+			          "Target": {
+			            "Entity": "amazonfashion__YT"
+			          }
+			        },
+			        "amazon": {
+			          "Target": {
+			            "Entity": "amazon"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazonfashion__YT"
+			            },
+			            "Object": {
+			              "Role": "amazon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "amazonfashion__YT_have_amazons"
+			        }
+			      ]
+			    },
+			    "amazon_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon.date": {
+			          "Target": {
+			            "Entity": "amazon.date"
+			          }
+			        },
+			        "amazon.date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "amazon.date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon.date"
+			            },
+			            "Object": {
+			              "Role": "amazon.date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "amazon_date_date_hierarchy_has_amazon_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon.date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "amazon.date.date_hierarchy"
+			          }
+			        },
+			        "amazon.date.year": {
+			          "Target": {
+			            "Entity": "amazon.date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon.date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "amazon.date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_years"
+			        }
+			      ]
+			    },
+			    "amazon_date_date_hierarchy_has_amazon_date_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon.date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "amazon.date.date_hierarchy"
+			          }
+			        },
+			        "amazon.date.quarter": {
+			          "Target": {
+			            "Entity": "amazon.date.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon.date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "amazon.date.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_quarters"
+			        }
+			      ]
+			    },
+			    "amazon_date_date_hierarchy_has_amazon_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon.date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "amazon.date.date_hierarchy"
+			          }
+			        },
+			        "amazon.date.month": {
+			          "Target": {
+			            "Entity": "amazon.date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon.date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "amazon.date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_months"
+			        }
+			      ]
+			    },
+			    "amazon_date_date_hierarchy_has_amazon_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Amazon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "amazon.date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "amazon.date.date_hierarchy"
+			          }
+			        },
+			        "amazon.date.day": {
+			          "Target": {
+			            "Entity": "amazon.date.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "amazon.date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "amazon.date.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_days"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

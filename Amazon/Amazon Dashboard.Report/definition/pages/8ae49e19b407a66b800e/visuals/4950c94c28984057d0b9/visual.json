@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "4950c94c28984057d0b9",
+  "position": {
+    "x": 64.737673952430512,
+    "y": 11.052773601634479,
+    "z": 5000,
+    "height": 64.737673952430512,
+    "width": 143.68605682124823,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "image",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "imageUrl": {
+              "expr": {
+                "ResourcePackageItem": {
+                  "PackageName": "RegisteredResources",
+                  "PackageType": 1,
+                  "ItemName": "1688364164amazon-logo-transpar6127739262694124.png"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "9cbf7ea4454e84a1c436"
+}

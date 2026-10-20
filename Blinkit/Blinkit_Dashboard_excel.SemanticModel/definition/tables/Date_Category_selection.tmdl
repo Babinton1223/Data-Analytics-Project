@@ -1,0 +1,50 @@
+table Date_Category_selection
+	lineageTag: 520b5db6-b7b9-4e53-a550-2c5cfb591a53
+
+	column Parameter
+		lineageTag: e9305008-ab12-44d7-bcb7-c9103cd05c48
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parameter Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Parameter Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Fields'
+		isHidden
+		lineageTag: 2bd5feed-979a-4598-9203-d4d2259e447d
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parameter Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parameter Order'
+		isHidden
+		formatString: 0
+		lineageTag: b1d6b18c-8526-40b9-82fe-1cc0a71fcc68
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Date_Category_selection = calculated
+		mode: import
+		source =
+				{
+				    ("Month", NAMEOF('Calendar'[Month]), 0),
+				    ("Month-Yr", NAMEOF('Calendar'[Month-Yr]), 1),
+				    ("Quater", NAMEOF('Calendar'[Quater]), 2),
+				    ("Day", NAMEOF('Calendar'[Day]), 3)
+				}
+
+	annotation PBI_Id = ee74dbcf49a14d3384c4a205570c1162
+

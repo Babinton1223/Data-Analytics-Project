@@ -1,0 +1,41 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		fastCombine
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Dataset - Excel","Customer","Customer_Feedback","Delivery_Performance","Marketing","Orders","Order_Items","Products","Category","Rating","Master_table","Time_Period","Inventory","Product_ID"]
+
+annotation PBI_ProTooling = ["DaxQueryView_Desktop","MCP-PBIModeling","DevMode"]
+
+ref table DateTableTemplate_150b43fd-8307-4875-8562-c735bef73a5e
+ref table Calendar
+ref table Autodate
+ref table Config_Measures
+ref table Sales_Measure
+ref table Manual_Calendar
+ref table Dynamic_title
+ref table Date_Category_selection
+ref table Rank_Table
+ref table Customer_Measure
+ref table LocalDateTable_8ac87a3b-de4f-47ec-9248-3c777e5ccfb0
+ref table LocalDateTable_1b159c11-ee45-42c4-a8a5-8035fd44ff72
+ref table Order_Filter_Table
+ref table Inventory_Measures
+ref table Marketing
+ref table Master_table
+ref table LocalDateTable_37f4664d-0a31-4117-b981-52ed8ebefad7
+ref table LocalDateTable_5b454819-9630-4268-b3f5-4bcf25392936
+ref table LocalDateTable_301f45a6-7194-44ad-aaaa-dba1aaa6be60
+ref table Time_Period
+ref table Inventory
+ref table Marketing_Measures
+ref table Product_ID
+
+ref cultureInfo en-US
+

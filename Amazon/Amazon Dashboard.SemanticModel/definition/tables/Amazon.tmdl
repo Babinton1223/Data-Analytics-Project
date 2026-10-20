@@ -1,0 +1,276 @@
+table Amazon
+	lineageTag: 85277afb-a1c6-4086-961b-68059b6a44b3
+
+	measure Sales_Amount = SUM(Amazon[Total_Amount])
+		lineageTag: 272a1f25-72ce-4405-9f01-06aa4b6c0451
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Sales_Units = SUM(Amazon[Qty])
+		formatString: 0
+		lineageTag: a6bb6610-03c6-4b84-9c15-ba965a56cc95
+
+	measure Filter_Sales =
+			var _select = SELECTEDVALUE(Sale_Option[Type])
+			Return IF(_select="1",[Sales_Amount],[Sales_Units])
+		lineageTag: 2380fae2-20ec-43b3-b683-307adbd20e0d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Overall_Sales = CALCULATE([Filter_Sales],ALL('amazon-fashion - YT'[Category]))
+		lineageTag: 793b4072-ee90-4388-b145-02045b32eaf3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Return = if([Sales_Units]=BLANK(),"0",[Sales_Units])
+		lineageTag: 976f97e7-a0cf-4770-b530-200c0e05a7f4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Sale_units_measure = IF([Sales_Units]=BLANK(),"0",[Sales_Units])
+		lineageTag: e53e3837-4bcc-4ba5-8b0e-6b9662f6d731
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Sale_amount_measure = IF([Sales_Amount]=BLANK(),"0",[Sales_Amount])
+		lineageTag: 19297324-29cc-4a47-9334-dfa30ed267b4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dynamic city' =
+			var _title = (SELECTEDVALUE(Sale_Option[Name]))
+			return if(_title = "Sales","Sales by City","Units Sold by City")
+		lineageTag: b06f4beb-b957-4dcf-a1d5-b09aa72756ad
+
+	measure 'Dynamic State' =
+			var _title = (SELECTEDVALUE(Sale_Option[Name]))
+			return if(_title = "Sales","Sales by State","Units Sold by State")
+		lineageTag: 1048bf88-78d4-46d4-9961-3fcba9fee28f
+
+	measure 'Dynamic date' =
+			var _title = (SELECTEDVALUE(Sale_Option[Name]))
+			return if(_title = "Sales","Sales by Date","Units Sold by Date")
+		lineageTag: a2954fac-fe81-4498-8705-a2d7203f0345
+
+	measure 'Dynamic sales' =
+			var Card = SELECTEDVALUE(Sale_Option[Name])
+			return if (Card="Sales","Sales_Amount","Units Sold")
+		lineageTag: f61429ab-24e8-410b-8d82-d8bd8ff9b393
+
+	measure 'Dynamic overall' =
+			var overall = SELECTEDVALUE(Sale_Option[Name])
+			return if (overall="Sales","Overall_Sales","Overall_Units")
+		lineageTag: 89da9f8e-705b-4965-85b8-e19a540fcac8
+
+	column 'Order ID'
+		dataType: string
+		lineageTag: 393e8f76-388b-4fd1-8948-b21794b6d576
+		summarizeBy: none
+		sourceColumn: Order ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0cb71ae2-562f-4d43-89b2-ff0133e86f41
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: eca5da56-e1d8-4fa8-833f-80f1d81a9fc8
+			defaultHierarchy: LocalDateTable_a7819df9-68ab-43fd-af41-36fade7c3204.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Status
+		dataType: string
+		lineageTag: 5c26e010-65a1-48e9-a9f8-2fdcc262c9be
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fulfilment
+		dataType: string
+		lineageTag: 4b3191f3-ad9b-4ee6-bb77-af6960e84802
+		summarizeBy: none
+		sourceColumn: Fulfilment
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Channel '
+		dataType: string
+		lineageTag: 8c05108c-948f-4cd9-8ada-47eb5867ba7d
+		summarizeBy: none
+		sourceColumn: "Sales Channel "
+
+		annotation SummarizationSetBy = Automatic
+
+	column ship-service-level
+		dataType: string
+		lineageTag: 5551f48e-435b-46d6-a0f9-7df7ca67f0d1
+		summarizeBy: none
+		sourceColumn: ship-service-level
+
+		annotation SummarizationSetBy = Automatic
+
+	column Style
+		dataType: string
+		lineageTag: b0a7db49-e3b7-49aa-8229-935304ecf09c
+		summarizeBy: none
+		sourceColumn: Style
+
+		annotation SummarizationSetBy = Automatic
+
+	column SKU
+		dataType: string
+		lineageTag: 7751ebea-34a5-4138-81d6-1a759021d53e
+		summarizeBy: none
+		sourceColumn: SKU
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: af9bb8b9-c65c-49ea-b0eb-6bdb29329348
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Size
+		dataType: string
+		lineageTag: 2ccadeb6-aa19-43f2-b6c0-ab8059eb8b62
+		summarizeBy: none
+		sourceColumn: Size
+
+		annotation SummarizationSetBy = Automatic
+
+	column ASIN
+		dataType: string
+		lineageTag: 7211f44f-0269-4c05-8c1d-e9c08b47b3dd
+		summarizeBy: none
+		sourceColumn: ASIN
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Courier Status'
+		dataType: string
+		lineageTag: 9292458e-83e8-4188-ab27-535a946f300e
+		summarizeBy: none
+		sourceColumn: Courier Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Qty
+		dataType: int64
+		formatString: 0
+		lineageTag: 2cc9ba93-2a27-4845-aec6-6432ed6b20c3
+		summarizeBy: sum
+		sourceColumn: Qty
+
+		annotation SummarizationSetBy = Automatic
+
+	column currency
+		dataType: string
+		lineageTag: 592b79b6-dc89-469d-89c2-ca8a544d91b0
+		summarizeBy: none
+		sourceColumn: currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column ship-city
+		dataType: string
+		lineageTag: 06b6b8c5-e0da-40af-973b-b65d68c182d4
+		summarizeBy: none
+		sourceColumn: ship-city
+
+		annotation SummarizationSetBy = Automatic
+
+	column ship-state
+		dataType: string
+		lineageTag: bb353c9f-7131-4df0-91a3-38a830fe62be
+		summarizeBy: none
+		sourceColumn: ship-state
+
+		annotation SummarizationSetBy = Automatic
+
+	column ship-postal-code
+		dataType: int64
+		formatString: 0
+		lineageTag: 6264fa1f-b735-4de3-889e-5a3ef930ada2
+		summarizeBy: sum
+		sourceColumn: ship-postal-code
+
+		annotation SummarizationSetBy = Automatic
+
+	column ship-country
+		dataType: string
+		lineageTag: e8dea0d9-b266-4f2b-a27b-f87386ec3158
+		summarizeBy: none
+		sourceColumn: ship-country
+
+		annotation SummarizationSetBy = Automatic
+
+	column fulfilled-by
+		dataType: string
+		lineageTag: 5c9cf10a-d614-4462-add1-7516e386a461
+		summarizeBy: none
+		sourceColumn: fulfilled-by
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: double
+		lineageTag: 3cbeea94-158f-4c45-a9bc-68a0b77142dd
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total_Amount = Amazon[Amount]*Amazon[Qty]
+		lineageTag: 44ca1cbc-6854-4d44-8acc-139a2463354b
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Instock_Qty
+		dataType: int64
+		formatString: 0
+		lineageTag: 053ad610-0ff3-4ef7-add0-cbe24b4e58c0
+		summarizeBy: sum
+		sourceColumn: Instock_Qty
+
+		annotation SummarizationSetBy = User
+
+	partition Amazon = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\jbabinto\Downloads\Amazon_dashboard\Amazon Sale Report - YT.xlsb.xlsx"), null, true),
+				    Amazon_Sheet = Source{[Item="Amazon",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Amazon_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Column1", type text}, {"Sales Data", type any}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}, {"Column6", type text}, {"Column7", type text}, {"Column8", type text}, {"Column9", type text}, {"Column10", type text}, {"Column11", type text}, {"Column12", type text}, {"Column13", type any}, {"Column14", type text}, {"Column15", type text}, {"Column16", type text}, {"Column17", type any}, {"Column18", type text}, {"Column19", type text}, {"Column20", type any}}),
+				    #"Promoted Headers1" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers1",{{"Order ID", type text}, {"Date", type date}, {"Status", type text}, {"Fulfilment", type text}, {"Sales Channel ", type text}, {"ship-service-level", type text}, {"Style", type text}, {"SKU", type text}, {"Category", type text}, {"Size", type text}, {"ASIN", type text}, {"Courier Status", type text}, {"Qty", Int64.Type}, {"currency", type text}, {"ship-city", type text}, {"ship-state", type text}, {"ship-postal-code", Int64.Type}, {"ship-country", type text}, {"fulfilled-by", type text}, {"Column20", type any}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type1",{"Column20"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Removed Columns", {"ASIN"}, #"amazon-fashion - YT", {"asin"}, "amazon-fashion - YT", JoinKind.LeftOuter),
+				    #"Expanded amazon-fashion - YT" = Table.ExpandTableColumn(#"Merged Queries", "amazon-fashion - YT", {"sales_price"}, {"amazon-fashion - YT.sales_price"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Expanded amazon-fashion - YT",{{"amazon-fashion - YT.sales_price", "Amount"}}),
+				    #"Added Custom" = Table.AddColumn(#"Renamed Columns", "Instock_Qty", each Number.RandomBetween(1,1000)),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Custom",{{"Instock_Qty", Int64.Type}})
+				in
+				    #"Changed Type2"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

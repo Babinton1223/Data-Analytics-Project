@@ -1,0 +1,82 @@
+table Calendar
+	lineageTag: c27447bb-194b-4904-a822-91fb1353920d
+
+	column Date
+		formatString: Short Date
+		lineageTag: 21552c68-33ca-47d6-896c-69a594afe709
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 6724fafa-082e-459e-8072-0fb750e21bf0
+			defaultHierarchy: LocalDateTable_8ac87a3b-de4f-47ec-9248-3c777e5ccfb0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: f0bef0fa-9227-4234-8097-2863d06f3233
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: 3f0c553b-99a3-435b-8ee7-019191ff7c00
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+		sortByColumn: MonthIndex
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month-Yr
+		lineageTag: b1f17971-b0d1-4911-b075-093bdd9a0f29
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month-Yr]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		lineageTag: 294e8f93-7f2c-47c0-b3f9-84bc91a27c99
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Day]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthIndex
+		formatString: 0
+		lineageTag: 14b24f1b-0af8-43f8-83d0-9b9072524483
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [MonthIndex]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quater
+		lineageTag: 41579f09-44a8-41b9-b2e9-cf0ebaaf3952
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quater]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendar = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS(CALENDAR("1/1/"&[Previous_Year],"31/12/"&[Current_Year]),
+				"Year",YEAR([Date]),
+				"Month",FORMAT([Date],"mmm"),
+				"Month-Yr",FORMAT([Date],"mmm-yy"),
+				"Day",FORMAT([Date],"ddd"),
+				"MonthIndex",MONTH([Date]),
+				"Quater","Q"&QUARTER([Date]))
+
+	annotation PBI_Id = 3cbe85704ff54de6b2dde6da77753862
+

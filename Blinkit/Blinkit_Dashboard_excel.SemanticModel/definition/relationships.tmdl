@@ -1,0 +1,53 @@
+relationship 6724fafa-082e-459e-8072-0fb750e21bf0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Calendar.Date
+	toColumn: LocalDateTable_8ac87a3b-de4f-47ec-9248-3c777e5ccfb0.Date
+
+relationship 1c734951-f265-4873-b45d-8d4388b34750
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Manual_Calendar.Date
+	toColumn: LocalDateTable_1b159c11-ee45-42c4-a8a5-8035fd44ff72.Date
+
+relationship 0ef52652-9b05-435b-a9e6-a0f6fcdee6d3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Master_table.order_date
+	toColumn: LocalDateTable_37f4664d-0a31-4117-b981-52ed8ebefad7.Date
+
+relationship 4fd158ba-7ac2-44f0-b2f8-ab70593b888b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Master_table.promised_delivery_time
+	toColumn: LocalDateTable_5b454819-9630-4268-b3f5-4bcf25392936.Date
+
+relationship 8cbba726-b6dc-434d-ae1a-1f5ab157e48f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Master_table.actual_delivery_time
+	toColumn: LocalDateTable_301f45a6-7194-44ad-aaaa-dba1aaa6be60.Date
+
+relationship e70c8e3b-bd75-8255-f5c1-2392fdf755ac
+	fromColumn: Master_table.Date
+	toColumn: Calendar.Date
+
+relationship 0f3bbf5f-856d-9a61-6871-2a1dcf0e5e87
+	fromColumn: Marketing.date
+	toColumn: Calendar.Date
+
+relationship e26711c5-3359-b691-6983-de372b13a170
+	fromColumn: Inventory.Date
+	toColumn: Calendar.Date
+
+relationship c7e1284e-7a68-2bdb-61cf-8bd4e2549ef4
+	fromColumn: Inventory.Value_Type
+	toColumn: Sales_Measure.Value_Type
+
+relationship f827ce3c-1b28-bd29-4de6-0d7e5ed09a79
+	fromColumn: Master_table.Value_Type
+	toColumn: Sales_Measure.Value_Type
+
+relationship AutoDetected_6668a311-645e-4626-b7ab-2ec6289dc6cd
+	fromColumn: Master_table.Product_id
+	toColumn: Product_ID.Product_id
+
+relationship AutoDetected_db201928-0844-4582-b0b9-d2e7b90082c2
+	fromColumn: Inventory.product_id
+	toColumn: Product_ID.Product_id
+

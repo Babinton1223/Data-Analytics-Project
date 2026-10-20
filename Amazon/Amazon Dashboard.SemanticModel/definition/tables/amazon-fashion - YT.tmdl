@@ -1,0 +1,196 @@
+table 'amazon-fashion - YT'
+	lineageTag: b21575ef-1033-4dab-824a-95950a9d4160
+
+	measure reviews =
+			var val = SUM('amazon-fashion - YT'[no_of_reviews])
+			return if(val=BLANK(),"0",val)
+		lineageTag: 01333362-6704-4ce6-91c7-0001263377c9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column amazon_prime__y_or_n
+		dataType: string
+		lineageTag: 390d2088-902e-4964-bf77-d21df8ba049d
+		summarizeBy: none
+		sourceColumn: amazon_prime__y_or_n
+
+		annotation SummarizationSetBy = Automatic
+
+	column asin
+		dataType: string
+		lineageTag: db6f3204-7369-4981-98df-b3f4d42ae1f9
+		summarizeBy: none
+		sourceColumn: asin
+
+		annotation SummarizationSetBy = Automatic
+
+	column best_seller_tag__y_or_n
+		dataType: string
+		lineageTag: c945ae09-85e7-4d2f-9e32-2951e145f9ac
+		summarizeBy: none
+		sourceColumn: best_seller_tag__y_or_n
+
+		annotation SummarizationSetBy = Automatic
+
+	column brand
+		dataType: string
+		lineageTag: ea7472d6-1fd5-4078-ab76-36c8e99de87c
+		summarizeBy: none
+		sourceColumn: brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column colour
+		dataType: string
+		lineageTag: bad9e2c9-d18c-4c78-9a41-2adb032240a5
+		summarizeBy: none
+		sourceColumn: colour
+
+		annotation SummarizationSetBy = Automatic
+
+	column delivery_type
+		dataType: string
+		lineageTag: 24ea5d28-356c-453a-b6e3-a1e54e1b7046
+		summarizeBy: none
+		sourceColumn: delivery_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column discount_percentage
+		dataType: double
+		lineageTag: faaa6298-d5a7-4953-b9bd-57074c943f7c
+		summarizeBy: sum
+		sourceColumn: discount_percentage
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column left_in_stock
+		dataType: int64
+		formatString: 0
+		lineageTag: b47e6737-46be-4bd4-a14f-65ab9dfdf188
+		summarizeBy: sum
+		sourceColumn: left_in_stock
+
+		annotation SummarizationSetBy = Automatic
+
+	column no_of_reviews
+		dataType: int64
+		formatString: 0
+		lineageTag: 7648397d-84d9-4a27-8304-cbefc4ffd079
+		summarizeBy: sum
+		sourceColumn: no_of_reviews
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: 600eabdc-f4d6-4521-bc99-48a9d7190766
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_details
+		dataType: string
+		lineageTag: 515e500e-427c-4051-88f7-3e4e68eb9a97
+		summarizeBy: none
+		sourceColumn: product_details
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: 7e3ed3bf-7170-467f-8378-f16c88043520
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_url
+		dataType: string
+		lineageTag: 367417d2-b66d-49e4-be4b-4ae4b37c8c37
+		summarizeBy: none
+		sourceColumn: product_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column rating
+		dataType: double
+		lineageTag: 2897d0ad-e826-48dd-880e-449bcab0840f
+		summarizeBy: sum
+		sourceColumn: rating
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column sales_price
+		dataType: double
+		lineageTag: 94345304-0172-4e04-89b9-b39f22a3e57e
+		summarizeBy: sum
+		sourceColumn: sales_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column seller_name
+		dataType: string
+		lineageTag: c9b41622-8260-49ef-8c4f-4cd29d567b1c
+		summarizeBy: none
+		sourceColumn: seller_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Seller ID'
+		dataType: string
+		lineageTag: 3c307c3d-a19b-4ab9-af2a-4921aaed7690
+		summarizeBy: none
+		sourceColumn: Seller ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'large.1'
+		dataType: string
+		lineageTag: 45465ddc-53f0-4b96-8f4d-ed25c6d6ee3e
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: large.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: e323f722-f85f-4b9b-aad3-486b88fc1f41
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'amazon-fashion - YT' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\jbabinto\Downloads\Amazon_dashboard\amazon-fashion - YT.csv"),[Delimiter=",", Columns=25, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"amazon_prime__y_or_n", type text}, {"asin", type text}, {"best_seller_tag__y_or_n", type text}, {"brand", type text}, {"colour", type text}, {"delivery_type", type text}, {"discount_percentage", Percentage.Type}, {"large", type text}, {"left_in_stock", Int64.Type}, {"no_of_reviews", Int64.Type}, {"description", type text}, {"product_details", type text}, {"product_name", type text}, {"product_url", type text}, {"rating", type number}, {"sales_price", type number}, {"Category", type text}, {"seller_name", type text}, {"Saller ID", type text}, {"", type text}, {"_1", type text}, {"_2", type text}, {"_3", type text}, {"_4", type text}, {"_5", type text}}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Changed Type", "large", Splitter.SplitTextByEachDelimiter({"|"}, QuoteStyle.Csv, false), {"large.1", "large.2"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"large.1", type text}, {"large.2", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type1",{"large.2"}),
+				    #"Split Column by Character Transition" = Table.SplitColumn(#"Removed Columns", "Category", Splitter.SplitTextByCharacterTransition({"a".."z"}, {"A".."Z"}), {"Category.1", "Category.2", "Category.3"}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Split Column by Character Transition",null,"",Replacer.ReplaceValue,{"Category.2"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value",null,"",Replacer.ReplaceValue,{"Category.3"}),
+				    #"Added Custom" = Table.AddColumn(#"Replaced Value1", "Custom", each [Category.1]&" "&[Category.2]&" "&[Category.3]),
+				    #"Renamed Columns" = Table.RenameColumns(#"Added Custom",{{"Custom", "Category"}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Renamed Columns",{"", "_1", "_2", "_3", "_4", "_5", "Category.1", "Category.2", "Category.3"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Removed Columns1",{{"Saller ID", "Seller ID"}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Renamed Columns1", each ([large.1] <> ""))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

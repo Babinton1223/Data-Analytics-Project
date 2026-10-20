@@ -1,0 +1,33 @@
+table Time_Period
+	lineageTag: b751d5cb-8ba0-413f-b81a-d9b35af50ac1
+
+	column Options
+		dataType: string
+		lineageTag: 2e6878ec-a420-41a2-a2d5-fc4b4f8f392e
+		summarizeBy: none
+		sourceColumn: Options
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value
+		dataType: int64
+		formatString: 0
+		lineageTag: 34fdd184-6acd-407a-8dbe-927082333f8c
+		summarizeBy: sum
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Time_Period = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45W8kksLlHwzc8ryVDSUTJUitWBChlBBIuBokYIUWOEqDFC1AwhaoYQtUSIWoJFI0NcgGwDpdhYAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Options = _t, Value = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Options", type text}, {"Value", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

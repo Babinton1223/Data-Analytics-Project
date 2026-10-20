@@ -1,0 +1,10 @@
+// Welcome to DAX query view! Learn more about DAX queries at https://aka.ms/dax-queries.
+// Right-click on tables, columns, or measures in the data pane to access quick queries, or ask Copilot for help writing DAX.
+
+// Select "Run" to try this sample DAX query.
+EVALUATE
+var time_filter = SELECTEDVALUE(Time_Period[Value])
+Var selected_month = [YTD_Month]
+Var start_index= selected_month-time_filter
+Var time_period = CALCULATE([Customer_Order_id_Count],'Calendar'[MonthIndex]>=start_index,'Calendar'[MonthIndex]<selected_month)
+return if(time_filter=0,[YTD],time_period)

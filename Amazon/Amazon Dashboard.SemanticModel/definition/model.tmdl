@@ -1,0 +1,22 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["amazon-fashion - YT","Sale_Option","Amazon"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'amazon-fashion - YT'
+ref table Sale_Option
+ref table Amazon
+ref table DateTableTemplate_219e764e-252b-4fca-9f12-21968bbe1652
+ref table LocalDateTable_a7819df9-68ab-43fd-af41-36fade7c3204
+
+ref cultureInfo en-US
+
