@@ -167,6 +167,9 @@ table Measures_table
 	measure Pressure = SUM(Current__Day_Weather[current.pressure_in])& " mm"
 		lineageTag: 8ebd777e-2ad5-404a-b48c-09f75f1b7d85
 
+	measure 'dummy measure' = "kindly delete this measure"
+		lineageTag: 6b003298-645f-4040-a92c-2c8ea9e801b4
+
 	column 'location.name'
 		lineageTag: 6b4dc551-0edf-42b0-8b84-c88677bc499b
 		summarizeBy: none
